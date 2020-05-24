@@ -14,6 +14,7 @@
 		69E663EB2479E63300D352D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E663E92479E63300D352D8 /* Main.storyboard */; };
 		69E663ED2479E63500D352D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E663EC2479E63500D352D8 /* Assets.xcassets */; };
 		69E663F02479E63500D352D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E663EE2479E63500D352D8 /* LaunchScreen.storyboard */; };
+		69E663FA2479F54600D352D8 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69E663F92479F54600D352D8 /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		69E663EC2479E63500D352D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69E663EF2479E63500D352D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69E663F12479E63500D352D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69E663F92479F54600D352D8 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		69E663E02479E63300D352D8 /* did you? */ = {
 			isa = PBXGroup;
 			children = (
+				69E663F82479F42400D352D8 /* Fonts */,
 				69E663E12479E63300D352D8 /* AppDelegate.swift */,
 				69E663E32479E63300D352D8 /* SceneDelegate.swift */,
 				69E663E52479E63300D352D8 /* FirstViewController.swift */,
@@ -68,6 +71,14 @@
 				69E663F12479E63500D352D8 /* Info.plist */,
 			);
 			path = "did you?";
+			sourceTree = "<group>";
+		};
+		69E663F82479F42400D352D8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				69E663F92479F54600D352D8 /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E663F02479E63500D352D8 /* LaunchScreen.storyboard in Resources */,
+				69E663FA2479F54600D352D8 /* Poppins-SemiBold.ttf in Resources */,
 				69E663ED2479E63500D352D8 /* Assets.xcassets in Resources */,
 				69E663EB2479E63300D352D8 /* Main.storyboard in Resources */,
 			);
