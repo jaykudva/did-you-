@@ -9,9 +9,7 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
-//    var taskList: [String] = ["1", "2", "3"]
-//    var taskList: [String] = []
+    
     
     var responses: [String] = ["task1", "task2"]
     public var str = ""
@@ -28,17 +26,12 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         taskInput.delegate = self
+    
     }
     override func viewDidAppear(_ animated: Bool) {
         loadUp()
         textViewing.text = str
     }
-    
-//    func loadUpIf() {
-  //      if taskList.count > 0 {
-    //        loadUp()
-      //  }
-  //  }
     
     func loadUp() {
         str = ""
@@ -46,7 +39,7 @@ class FirstViewController: UIViewController {
             str = str + s + "\n"
         }
     }
-    func loadUpFrom(_ list : [String]) {
+    func loadUp(_ list : [String]) {
         for s in list {
             new = new + s + "\n"
         }
@@ -57,14 +50,14 @@ class FirstViewController: UIViewController {
     @IBAction func retrieve(_ sender: Any) {
         textViewing.text = ""
         responses = UserDefaults.standard.stringArray(forKey: "responses") ?? [String]()
-        loadUpFrom(responses)
+        loadUp(responses)
         textViewing.text = new
     }
     
     
     @IBAction func enterTap(_ sender: Any) {
         input = taskInput.text!
-        var t = taskObject.init()
+        let t = taskObject.init()
         t.task = input
         t.priority = 2
         taskController.addToDo(t)
