@@ -28,9 +28,11 @@ class TableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    func doThis() {
-        tableView.reloadData()
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    
     
 
     /*
@@ -53,11 +55,18 @@ extension TableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "taskCell")
-        cell.textLabel?.text = tasks[indexPath.row].task
-        cell.detailTextLabel?.text = tasks[indexPath.row].date?.toString(dateFormat: "yyyy/MMM/dd HH:mm:ss")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell") as! TableViewCell
+        
+        cell.setup(task: tasks[indexPath.row])
+        
+//        cell!.textLabel?.text = tasks[indexPath.row].task
+//        cell!.detailTextLabel?.text = tasks[indexPath.row].date?.toString(dateFormat: "yyyy/MMM/dd HH:mm:ss")
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
