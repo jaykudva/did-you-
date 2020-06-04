@@ -20,7 +20,15 @@ class TableViewController: UITableViewController {
         // Do any additional setup after loading the view
         
         
-        CoreDataController.shared.addTask(with: "only", priority: 2, and: Date())
+        // CoreDataController.shared.addTask(with: "only", priority: 2, and: Date())
+        tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    func doThis() {
         tableView.reloadData()
     }
     
@@ -50,6 +58,25 @@ extension TableViewController {
         cell.detailTextLabel?.text = tasks[indexPath.row].date?.toString(dateFormat: "yyyy/MMM/dd HH:mm:ss")
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+//    private fun deleteTask(at indexPath: IndexPath) {
+//        CoreDataController.shared.removeTask(with: <#T##String#>, priority: <#T##Int16#>, and: <#T##Date#>)
+//    }
+}
+
+
+extension TableViewController {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+        
+        CoreDataController.shared.removeTask(with: tasks[indexPath.row].task!, priority: tasks[indexPath.row].priority, and: tasks[indexPath.row].date!)
+        
+        tableView.reloadData()
     }
 }
 
