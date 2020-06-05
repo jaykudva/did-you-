@@ -43,6 +43,7 @@ struct CoreDataController {
     func addTask(with msg: String, priority: Int16, and date: Date) {
         let task = NSEntityDescription.insertNewObject(forEntityName: "Task", into: viewContext) as? Task
         
+        
         task?.setValue(msg, forKey: "task")
         task?.setValue(priority, forKey: "priority")
         task?.setValue(date, forKey: "date")

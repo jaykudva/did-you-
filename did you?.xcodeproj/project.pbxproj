@@ -15,6 +15,7 @@
 		693C144E248794790044B37C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C144D248794790044B37C /* TableViewController.swift */; };
 		69B1F8652488C22400D6EDE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F8642488C22400D6EDE7 /* DetailViewController.swift */; };
 		69B1F8672488CE0A00D6EDE7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */; };
+		69B1F869248AD7E900D6EDE7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */; };
 		69E663E22479E63300D352D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E663E12479E63300D352D8 /* AppDelegate.swift */; };
 		69E663E42479E63300D352D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E663E32479E63300D352D8 /* SceneDelegate.swift */; };
 		69E663E62479E63300D352D8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E663E52479E63300D352D8 /* FirstViewController.swift */; };
@@ -34,6 +35,7 @@
 		693C144D248794790044B37C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		69B1F8642488C22400D6EDE7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		69E663DE2479E63300D352D8 /* did you?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "did you?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E663E12479E63300D352D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E663E32479E63300D352D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				69E663F82479F42400D352D8 /* Fonts */,
 				69E663E12479E63300D352D8 /* AppDelegate.swift */,
 				69E663E32479E63300D352D8 /* SceneDelegate.swift */,
+				69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */,
 				69E663E52479E63300D352D8 /* FirstViewController.swift */,
 				69B1F8642488C22400D6EDE7 /* DetailViewController.swift */,
 				693C144D248794790044B37C /* TableViewController.swift */,
@@ -194,6 +197,7 @@
 				693C1449248774DC0044B37C /* CoreDataController.swift in Sources */,
 				69B1F8672488CE0A00D6EDE7 /* TableViewCell.swift in Sources */,
 				69E663E22479E63300D352D8 /* AppDelegate.swift in Sources */,
+				69B1F869248AD7E900D6EDE7 /* CustomTextField.swift in Sources */,
 				69B1F8652488C22400D6EDE7 /* DetailViewController.swift in Sources */,
 				69026C5F247B20B3006C7A16 /* taskObjectController.swift in Sources */,
 				69E663E42479E63300D352D8 /* SceneDelegate.swift in Sources */,

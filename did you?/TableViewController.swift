@@ -13,6 +13,23 @@ class TableViewController: UITableViewController {
     var tasks: [Task] {
         return CoreDataController.shared.tasks
     }
+    
+    var oppTasks: [Task] {
+        return tasks.reversed()
+    }
+    
+    //this is all useless bc .reversed() is a thing
+    var tasksButReversed = [Task]()
+    
+    func tasksReversed() -> [Task] {
+        var i = tasks.count - 1
+        while i >= 0 {
+            tasksButReversed.append(tasks[i])
+            i -= 1
+        }
+        
+        return tasksButReversed
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +74,7 @@ extension TableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell") as! TableViewCell
         
-        cell.setup(task: tasks[indexPath.row])
+        cell.setup(task: oppTasks[indexPath.row])
         
 //        cell!.textLabel?.text = tasks[indexPath.row].task
 //        cell!.detailTextLabel?.text = tasks[indexPath.row].date?.toString(dateFormat: "yyyy/MMM/dd HH:mm:ss")
