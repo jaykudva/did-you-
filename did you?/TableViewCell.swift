@@ -9,7 +9,7 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
-
+    
     
     @IBOutlet weak var cardView: UIView!
     
@@ -17,6 +17,7 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var taskSub: UILabel!
     
+    @IBOutlet weak var priorityView: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,9 +28,19 @@ class TableViewCell: UITableViewCell {
         cardView.layer.shadowColor = UIColor.darkGray.cgColor
         cardView.layer.cornerRadius = 8
     }
-    
     func setup(task: Task) {
+        let priorityLvl = task.priority
+        var priorityMsg = ""
         taskMain.text = task.task
+        
+        if priorityLvl == 3 {
+               priorityMsg = "Need"
+           } else if priorityLvl == 2 {
+               priorityMsg = "Will"
+           } else {
+               priorityMsg = "Want"
+           }
+        priorityView.text = "Priority: \(priorityMsg)"
         taskSub.text = task.date?.toString(dateFormat: "MMM dd, yyyy HH:mm:ss")
     }
 

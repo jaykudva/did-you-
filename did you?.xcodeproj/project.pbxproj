@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		69026C5F247B20B3006C7A16 /* taskObjectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69026C5E247B20B3006C7A16 /* taskObjectController.swift */; };
-		69026C61247B2E24006C7A16 /* taskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69026C60247B2E24006C7A16 /* taskController.swift */; };
 		69026C63247B330C006C7A16 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69026C62247B330C006C7A16 /* Poppins-Regular.ttf */; };
 		693C1449248774DC0044B37C /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C1448248774DC0044B37C /* CoreDataController.swift */; };
 		693C144C248775F90044B37C /* didModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 693C144A248775F90044B37C /* didModel.xcdatamodeld */; };
@@ -16,10 +14,10 @@
 		69B1F8652488C22400D6EDE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F8642488C22400D6EDE7 /* DetailViewController.swift */; };
 		69B1F8672488CE0A00D6EDE7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */; };
 		69B1F869248AD7E900D6EDE7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */; };
+		69B1F86B248B05F700D6EDE7 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */; };
 		69E663E22479E63300D352D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E663E12479E63300D352D8 /* AppDelegate.swift */; };
 		69E663E42479E63300D352D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E663E32479E63300D352D8 /* SceneDelegate.swift */; };
 		69E663E62479E63300D352D8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E663E52479E63300D352D8 /* FirstViewController.swift */; };
-		69E663E82479E63300D352D8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E663E72479E63300D352D8 /* SecondViewController.swift */; };
 		69E663EB2479E63300D352D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E663E92479E63300D352D8 /* Main.storyboard */; };
 		69E663ED2479E63500D352D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69E663EC2479E63500D352D8 /* Assets.xcassets */; };
 		69E663F02479E63500D352D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69E663EE2479E63500D352D8 /* LaunchScreen.storyboard */; };
@@ -27,8 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		69026C5E247B20B3006C7A16 /* taskObjectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskObjectController.swift; sourceTree = "<group>"; };
-		69026C60247B2E24006C7A16 /* taskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskController.swift; sourceTree = "<group>"; };
 		69026C62247B330C006C7A16 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		693C1448248774DC0044B37C /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		693C144B248775F90044B37C /* didModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = didModel.xcdatamodel; sourceTree = "<group>"; };
@@ -36,11 +32,11 @@
 		69B1F8642488C22400D6EDE7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		69E663DE2479E63300D352D8 /* did you?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "did you?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E663E12479E63300D352D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E663E32479E63300D352D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		69E663E52479E63300D352D8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		69E663E72479E63300D352D8 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		69E663EA2479E63300D352D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69E663EC2479E63500D352D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69E663EF2479E63500D352D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,10 +92,8 @@
 				69B1F8642488C22400D6EDE7 /* DetailViewController.swift */,
 				693C144D248794790044B37C /* TableViewController.swift */,
 				69E663E92479E63300D352D8 /* Main.storyboard */,
+				69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */,
 				69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */,
-				69026C60247B2E24006C7A16 /* taskController.swift */,
-				69026C5E247B20B3006C7A16 /* taskObjectController.swift */,
-				69E663E72479E63300D352D8 /* SecondViewController.swift */,
 				69E663EC2479E63500D352D8 /* Assets.xcassets */,
 				69E663EE2479E63500D352D8 /* LaunchScreen.storyboard */,
 				69E663F12479E63500D352D8 /* Info.plist */,
@@ -189,17 +183,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69026C61247B2E24006C7A16 /* taskController.swift in Sources */,
 				693C144C248775F90044B37C /* didModel.xcdatamodeld in Sources */,
-				69E663E82479E63300D352D8 /* SecondViewController.swift in Sources */,
 				69E663E62479E63300D352D8 /* FirstViewController.swift in Sources */,
 				693C144E248794790044B37C /* TableViewController.swift in Sources */,
 				693C1449248774DC0044B37C /* CoreDataController.swift in Sources */,
 				69B1F8672488CE0A00D6EDE7 /* TableViewCell.swift in Sources */,
+				69B1F86B248B05F700D6EDE7 /* PopupViewController.swift in Sources */,
 				69E663E22479E63300D352D8 /* AppDelegate.swift in Sources */,
 				69B1F869248AD7E900D6EDE7 /* CustomTextField.swift in Sources */,
 				69B1F8652488C22400D6EDE7 /* DetailViewController.swift in Sources */,
-				69026C5F247B20B3006C7A16 /* taskObjectController.swift in Sources */,
 				69E663E42479E63300D352D8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,35 +13,13 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     var responses: [String] = ["task1", "task2"]
     var err = "nothing new"
-    var input = ""
+    var taskMsg = ""
+    var priorityLvl = ""
+    var priorityNum:Int16 = 0
 //    var toolBar = UIToolbar()
 //    var picker  = UIPickerView()
     
-    @IBAction func handleSelection(_ sender: UIButton) {
-        
-        
-        
-//        picker = UIPickerView.init()
-//        picker.delegate = self
-//        picker.isOpaque = true
-//        picker.setValue(color2, forKey: "backgroundColor")
-//        picker.setValue(UIColor.black, forKey: "textColor")
-//        picker.autoresizingMask = .flexibleWidth
-//        picker.contentMode = .center
-//        picker.frame = CGRect.init(x: 0.0, y: UIScreen.main.bounds.size.height - 300, width: UIScreen.main.bounds.size.width, height: 300)
-//        self.view.addSubview(picker)
-//
-//        toolBar = UIToolbar.init(frame: CGRect.init(x: 0.0, y: UIScreen.main.bounds.size.height - 300, width: UIScreen.main.bounds.size.width, height: 50))
-//        toolBar.barStyle = UIBarStyle.black
-//        toolBar.isTranslucent = true
-//        toolBar.items = [UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(onDoneButtonTapped))]
-//        self.view.addSubview(toolBar)
-        
-    }
-    
-
-    @IBOutlet weak var pleaseChange: UIButton!
-    
+    @IBOutlet weak var popupViewButton: UIButton!
     @IBOutlet weak var priorityField: CustomTextField!
     
     let priorities = ["need", "will", "want"]
@@ -49,6 +27,11 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 40
     }
     
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -64,7 +47,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         priorityField.resignFirstResponder()
     }
     
-    
+    var num = 0
     @IBOutlet weak var taskInput: UITextField!
     
     override func viewDidLoad() {
@@ -78,6 +61,10 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        if num == 0 {
+            popupViewButton.sendActions(for: .touchUpInside)
+            num += 1
+        }
         
     }
     
@@ -99,8 +86,17 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     
     @IBAction func enterTap(_ sender: Any) {
-        input = taskInput.text!
-        CoreDataController.shared.addTask(with: input, priority: 2, and: Date())
+        taskMsg = taskInput.text!
+        priorityLvl = priorityField.text!
+        
+        if priorityLvl == "need" {
+            priorityNum = 3
+        } else if priorityLvl == "will" {
+            priorityNum = 2
+        } else {
+            priorityNum = 1
+        }
+        CoreDataController.shared.addTask(with: taskMsg, priority: priorityNum, and: Date())
         taskInput.text = ""
     }
 }
