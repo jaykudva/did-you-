@@ -100,7 +100,7 @@ extension TableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
-        CoreDataController.shared.removeTask(with: tasks[indexPath.row].task!, priority: tasks[indexPath.row].priority, and: tasks[indexPath.row].date!)
+        CoreDataController.shared.removeTask(with: tasks[indexPath.row].task!, priority: tasks[indexPath.row].priority, and: oppTasks[indexPath.row].date!)
         
         tableView.reloadData()
     }

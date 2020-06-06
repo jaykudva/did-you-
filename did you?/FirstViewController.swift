@@ -10,97 +10,131 @@ import UIKit
 
 class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
-    
-    var responses: [String] = ["task1", "task2"]
-    var err = "nothing new"
+    // string to obtain task message
     var taskMsg = ""
+    // string with whitespace removed of task
+    var trimmed = ""
+    // string to store priority level message
     var priorityLvl = ""
+    // int to store priority level number
     var priorityNum:Int16 = 0
-//    var toolBar = UIToolbar()
-//    var picker  = UIPickerView()
-    
+    // virtually hidden button that used to trigger initial pop-up on initial app launch
     @IBOutlet weak var popupViewButton: UIButton!
+    // text field used to manipulate priority level selector, triggers priorityPickerView
     @IBOutlet weak var priorityField: CustomTextField!
-    
-    let priorities = ["need", "will", "want"]
+    // array of different priorities
+    let priorities = ["select", "need", "will", "want"]
+    // instantiate UIPickerView to be triggered on priorityField press
     var pickerView = UIPickerView()
+    // shrink length of characters needed to trigger UserDefaults
     let defaults = UserDefaults.standard
+    // store if this is initial app launch or not
+    var num = 0
+    // text field to input task
+    @IBOutlet weak var taskInput: UITextField!
     
+
+    // MARK: - UIPickerView Shenanigans
+    
+    // # of columns in priorityPickerView
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    // font and font size of priorityPickerView rows
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView
+    {
+        let pickerLabel = UILabel()
+        pickerLabel.text = priorities[row]
+        if pickerLabel.text == "select" {
+            pickerLabel.textColor = UIColor.darkGray
+        }
+        pickerLabel.font = UIFont(name: "Poppins-SemiBold", size: 25) // In this use your custom font
+        pickerLabel.textAlignment = NSTextAlignment.center
+        return pickerLabel
+    }
     
+    // row height of priorityPickerView
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 40
     }
     
+    // number of rows in priorityPickerView
     public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return priorities.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return priorities[row]
-    }
-    
+    // setting priorityField with selected option from priorityPickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        priorityField.text = priorities[row]
+        if priorities[row] == "select" {
+            priorityField.text = "need"
+        } else {
+            priorityField.text = priorities[row]
+        }
         priorityField.resignFirstResponder()
     }
     
-    var num = 0
-    @IBOutlet weak var taskInput: UITextField!
     
+    // MARK: - General App Load
+    // assigning delegates and sources on initial app launch
     override func viewDidLoad() {
         super.viewDidLoad()
-        num = defaults.integer(forKey: "popupNoMore")
         taskInput.delegate = self
         pickerView.delegate = self
         pickerView.dataSource = self
+        
+        // showing priorityPickerView when priority is selected
         priorityField.inputView = pickerView
         priorityField.textAlignment = .center
         
+        // checking if this is initial app launch to show pop-up
+        num = defaults.integer(forKey: "popupNoMore")
+        
     }
     
+    // determines if initial popup is shown
     override func viewDidAppear(_ animated: Bool) {
         if num == 0 {
             popupViewButton.sendActions(for: .touchUpInside)
-            num += 1
+            num = 1
+            // uses userdefaults to store whether popup should be shown
             defaults.set(num, forKey: "popupNoMore")
         }
         
     }
     
-//    func loadUp() {
-//        str = ""
-//        for s in responses {
-//            str = str + s + "\n"
-//        }
-//    }
-//    func loadUp(_ list : [String]) {
-//        for s in list {
-//            new = new + s + "\n"
-//        }
-//    }
+    // MARK: - App tap & engagement
+    // after option is selected, UIPickerView or keyboard will be dismissed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    
+    // execute when add task button is selected
     @IBAction func enterTap(_ sender: Any) {
-        taskMsg = taskInput.text!
-        priorityLvl = priorityField.text!
         
-        if priorityLvl == "need" {
-            priorityNum = 3
-        } else if priorityLvl == "will" {
-            priorityNum = 2
-        } else {
-            priorityNum = 1
+        // obtain task message and priority level
+        taskMsg = taskInput.text!
+        trimmed = taskMsg.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if trimmed != "" {
+            priorityLvl = priorityField.text!
+            
+            // parse priority level into number, with default level of want/"1"
+            if priorityLvl == "need" {
+                priorityNum = 3
+            } else if priorityLvl == "will" {
+                priorityNum = 2
+            } else {
+                priorityNum = 1
+            }
+            
+            // store task in memory
+            CoreDataController.shared.addTask(with: trimmed, priority: priorityNum, and: Date())
+            
+            // set task input back to empty
+            taskInput.text = ""
         }
-        CoreDataController.shared.addTask(with: taskMsg, priority: priorityNum, and: Date())
-        taskInput.text = ""
     }
 }
 
