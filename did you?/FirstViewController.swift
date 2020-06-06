@@ -24,6 +24,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     let priorities = ["need", "will", "want"]
     var pickerView = UIPickerView()
+    let defaults = UserDefaults.standard
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -52,6 +53,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        num = defaults.integer(forKey: "popupNoMore")
         taskInput.delegate = self
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -64,6 +66,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         if num == 0 {
             popupViewButton.sendActions(for: .touchUpInside)
             num += 1
+            defaults.set(num, forKey: "popupNoMore")
         }
         
     }
