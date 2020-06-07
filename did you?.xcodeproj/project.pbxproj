@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6902675A248CA327006AB80D /* Circular-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69026758248CA327006AB80D /* Circular-Bold.ttf */; };
+		6902675B248CA327006AB80D /* Circular-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69026759248CA327006AB80D /* Circular-Black.ttf */; };
+		6902675D248CA394006AB80D /* Circular-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6902675C248CA393006AB80D /* Circular-Medium.ttf */; };
 		69026C63247B330C006C7A16 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69026C62247B330C006C7A16 /* Poppins-Regular.ttf */; };
 		693C1449248774DC0044B37C /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C1448248774DC0044B37C /* CoreDataController.swift */; };
 		693C144C248775F90044B37C /* didModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 693C144A248775F90044B37C /* didModel.xcdatamodeld */; };
@@ -25,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69026758248CA327006AB80D /* Circular-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circular-Bold.ttf"; sourceTree = "<group>"; };
+		69026759248CA327006AB80D /* Circular-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circular-Black.ttf"; sourceTree = "<group>"; };
+		6902675C248CA393006AB80D /* Circular-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circular-Medium.ttf"; sourceTree = "<group>"; };
 		69026C62247B330C006C7A16 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		693C1448248774DC0044B37C /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		693C144B248775F90044B37C /* didModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = didModel.xcdatamodel; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 				693C1447248774CC0044B37C /* CoreData */,
 				69E663F82479F42400D352D8 /* Fonts */,
 				69E663E12479E63300D352D8 /* AppDelegate.swift */,
+				69E663F12479E63500D352D8 /* Info.plist */,
 				69E663E32479E63300D352D8 /* SceneDelegate.swift */,
 				69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */,
 				69E663E52479E63300D352D8 /* FirstViewController.swift */,
@@ -96,7 +103,6 @@
 				69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */,
 				69E663EC2479E63500D352D8 /* Assets.xcassets */,
 				69E663EE2479E63500D352D8 /* LaunchScreen.storyboard */,
-				69E663F12479E63500D352D8 /* Info.plist */,
 			);
 			path = "did you?";
 			sourceTree = "<group>";
@@ -104,6 +110,9 @@
 		69E663F82479F42400D352D8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				69026759248CA327006AB80D /* Circular-Black.ttf */,
+				6902675C248CA393006AB80D /* Circular-Medium.ttf */,
+				69026758248CA327006AB80D /* Circular-Bold.ttf */,
 				69026C62247B330C006C7A16 /* Poppins-Regular.ttf */,
 				69E663F92479F54600D352D8 /* Poppins-SemiBold.ttf */,
 			);
@@ -170,9 +179,12 @@
 			files = (
 				69E663F02479E63500D352D8 /* LaunchScreen.storyboard in Resources */,
 				69E663FA2479F54600D352D8 /* Poppins-SemiBold.ttf in Resources */,
+				6902675D248CA394006AB80D /* Circular-Medium.ttf in Resources */,
+				6902675A248CA327006AB80D /* Circular-Bold.ttf in Resources */,
 				69E663ED2479E63500D352D8 /* Assets.xcassets in Resources */,
 				69E663EB2479E63300D352D8 /* Main.storyboard in Resources */,
 				69026C63247B330C006C7A16 /* Poppins-Regular.ttf in Resources */,
+				6902675B248CA327006AB80D /* Circular-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
