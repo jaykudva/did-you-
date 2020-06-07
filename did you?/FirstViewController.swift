@@ -23,7 +23,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     // text field used to manipulate priority level selector, triggers priorityPickerView
     @IBOutlet weak var priorityField: CustomTextField!
     // array of different priorities
-    let priorities = ["select", "need", "will", "want"]
+    let priorities = ["select", "need", "got", "want"]
     // instantiate UIPickerView to be triggered on priorityField press
     var pickerView = UIPickerView()
     // shrink length of characters needed to trigger UserDefaults
@@ -123,7 +123,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             // parse priority level into number, with default level of want/"1"
             if priorityLvl == "need" {
                 priorityNum = 3
-            } else if priorityLvl == "will" {
+            } else if priorityLvl == "got" {
                 priorityNum = 2
             } else {
                 priorityNum = 1

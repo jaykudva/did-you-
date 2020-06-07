@@ -61,6 +61,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69026765248CBE7B006AB80D /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */,
+				69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */,
+				69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */,
+			);
+			name = objects;
+			sourceTree = "<group>";
+		};
+		69026766248CBE9A006AB80D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				69B1F8642488C22400D6EDE7 /* DetailViewController.swift */,
+				69E663E52479E63300D352D8 /* FirstViewController.swift */,
+				693C144D248794790044B37C /* TableViewController.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		69026767248CBEB8006AB80D /* delegates */ = {
+			isa = PBXGroup;
+			children = (
+				69E663E32479E63300D352D8 /* SceneDelegate.swift */,
+				69E663E12479E63300D352D8 /* AppDelegate.swift */,
+			);
+			name = delegates;
+			sourceTree = "<group>";
+		};
 		693C1447248774CC0044B37C /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,20 +118,15 @@
 		69E663E02479E63300D352D8 /* did you? */ = {
 			isa = PBXGroup;
 			children = (
+				69026767248CBEB8006AB80D /* delegates */,
+				69026765248CBE7B006AB80D /* objects */,
+				69026766248CBE9A006AB80D /* views */,
 				693C1447248774CC0044B37C /* CoreData */,
 				69E663F82479F42400D352D8 /* Fonts */,
-				69E663E12479E63300D352D8 /* AppDelegate.swift */,
-				69E663F12479E63500D352D8 /* Info.plist */,
-				69E663E32479E63300D352D8 /* SceneDelegate.swift */,
-				69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */,
-				69E663E52479E63300D352D8 /* FirstViewController.swift */,
-				69B1F8642488C22400D6EDE7 /* DetailViewController.swift */,
-				693C144D248794790044B37C /* TableViewController.swift */,
 				69E663E92479E63300D352D8 /* Main.storyboard */,
-				69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */,
-				69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */,
 				69E663EC2479E63500D352D8 /* Assets.xcassets */,
 				69E663EE2479E63500D352D8 /* LaunchScreen.storyboard */,
+				69E663F12479E63500D352D8 /* Info.plist */,
 			);
 			path = "did you?";
 			sourceTree = "<group>";

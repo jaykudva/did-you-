@@ -16,6 +16,9 @@
 ## UIPickerView
 * [Changing the font](https://stackoverflow.com/questions/27455345/uipickerview-wont-allow-changing-font-name-and-size-via-delegates-attributedt)
 
+## UITableView
+*[Removing lines in the tableview](https://stackoverflow.com/questions/40332305/remove-uitableview-separator-line)
+
 ## Colors
 * [Table view cell background](https://www.2020colours.com/0a1016)
 

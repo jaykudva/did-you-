@@ -35,6 +35,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
     }
     
     // reload data everytime table is brought to foreground
@@ -74,7 +75,7 @@ extension TableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
-        CoreDataController.shared.removeTask(with: tasks[indexPath.row].task!, priority: tasks[indexPath.row].priority, and: oppTasks[indexPath.row].date!)
+        CoreDataController.shared.removeTask(with: oppTasks[indexPath.row].task!, priority: oppTasks[indexPath.row].priority, and: oppTasks[indexPath.row].date!)
         tableView.reloadData()
     }
 }

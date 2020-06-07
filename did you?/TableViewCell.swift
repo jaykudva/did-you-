@@ -28,6 +28,7 @@ class TableViewCell: UITableViewCell {
         cardView.layer.shadowColor = UIColor.darkGray.cgColor
         cardView.layer.cornerRadius = 8
     }
+    
     func setup(task: Task) {
         let priorityLvl = task.priority
         var priorityMsg = ""
@@ -36,12 +37,13 @@ class TableViewCell: UITableViewCell {
         if priorityLvl == 3 {
                priorityMsg = "Need"
            } else if priorityLvl == 2 {
-               priorityMsg = "Will"
+               priorityMsg = "Gotta"
            } else {
                priorityMsg = "Want"
            }
         priorityView.text = "Priority: \(priorityMsg)"
-        taskSub.text = task.date?.toString(dateFormat: "MMM dd, yyyy HH:mm:ss")
+        taskSub.text = task.date?.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
+        
     }
 
 }

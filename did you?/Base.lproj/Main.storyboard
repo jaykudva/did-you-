@@ -16,15 +16,9 @@
         <array key="Circular-Medium.ttf">
             <string>CircularStd-Medium</string>
         </array>
-        <array key="Poppins-Regular.ttf">
-            <string>Poppins-Regular</string>
-        </array>
-        <array key="Poppins-SemiBold.ttf">
-            <string>Poppins-SemiBold</string>
-        </array>
     </customFonts>
     <scenes>
-        <!--First-->
+        <!--action-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="did_you_" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +26,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="did you - A minimal productivity app" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="did you? - A minimal productivity app" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
                                 <rect key="frame" x="16" y="697" width="230" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Lei-Pu-aVh"/>
@@ -40,38 +34,25 @@
                                 <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="8"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" text="I" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="180" y="121" width="16" height="68.666666666666686"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="48"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="input task" textAlignment="center" minimumFontSize="48" translatesAutoresizingMaskIntoConstraints="NO" id="wVM-rY-lRk">
-                                <rect key="frame" x="32" y="334" width="312" height="68.666666666666686"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAk-Io-KiF">
+                                <rect key="frame" x="147" y="468" width="80" height="30"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="17"/>
+                                <state key="normal" title="add task">
+                                    <color key="titleColor" red="0.42340537909999998" green="0.69866496320000004" blue="0.81938737630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="OgA-f2-0gS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="action" textAlignment="center" minimumFontSize="48" translatesAutoresizingMaskIntoConstraints="NO" id="wVM-rY-lRk">
+                                <rect key="frame" x="32" y="372" width="312" height="68.666666666666686"/>
                                 <color key="tintColor" red="0.42340537909999998" green="0.69866496320000004" blue="0.81938737630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="9cN-Df-4zB"/>
                                     <constraint firstAttribute="height" constant="68.666666666666657" id="Bsf-f2-HmI"/>
                                 </constraints>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="CircularStd-Black" family="Circular Std" pointSize="48"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="to" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lnL-LR-EGx">
-                                <rect key="frame" x="165" y="262" width="46" height="68.666666666666686"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="48"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="priority" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oaO-L1-3eR" customClass="CustomTextField" customModule="did_you_" customModuleProvider="target">
-                                <rect key="frame" x="90" y="188" width="197" height="67.333333333333314"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67.329999999999998" id="Uh6-nT-dhZ"/>
-                                </constraints>
-                                <color key="textColor" red="0.55203783510000004" green="0.63658833500000001" blue="0.56573128699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="48"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDb-ci-5A8">
@@ -86,49 +67,63 @@
                                     <segue destination="UNB-js-X0p" kind="presentation" id="5lu-y4-Kjy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAk-Io-KiF">
-                                <rect key="frame" x="147" y="468" width="80" height="30"/>
-                                <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="17"/>
-                                <state key="normal" title="add task">
-                                    <color key="titleColor" red="0.42340537909999998" green="0.69866496320000004" blue="0.81938737630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="enterTap:" destination="9pv-A4-QxB" eventType="touchUpInside" id="OgA-f2-0gS"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" text="I" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                <rect key="frame" x="180" y="178" width="16" height="68.666666666666686"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="to" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lnL-LR-EGx">
+                                <rect key="frame" x="165" y="304" width="46" height="68.666666666666686"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="48"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="priority" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oaO-L1-3eR" customClass="CustomTextField" customModule="did_you_" customModuleProvider="target">
+                                <rect key="frame" x="90" y="239.00000000000003" width="197" height="67.333333333333343"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67.329999999999998" id="Uh6-nT-dhZ"/>
+                                </constraints>
+                                <color key="textColor" red="0.55203783510000004" green="0.63658833500000001" blue="0.56573128699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="CircularStd-Black" family="Circular Std" pointSize="48"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="oaO-L1-3eR" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="90" id="7wO-DC-yJG"/>
                             <constraint firstItem="wVM-rY-lRk" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="AO7-st-QyA"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="507.33333333333337" id="BJ8-iU-Y6z"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="450.33333333333331" id="BJ8-iU-Y6z"/>
                             <constraint firstItem="oaO-L1-3eR" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" constant="1" id="DnH-Ur-ccD"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="lnL-LR-EGx" secondAttribute="trailing" constant="164" id="GIg-qj-CXE"/>
                             <constraint firstItem="wVM-rY-lRk" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" constant="0.5" id="H7O-mx-agJ"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="A5M-7J-77L" secondAttribute="trailing" constant="129" id="LCi-UA-nlX"/>
-                            <constraint firstItem="oaO-L1-3eR" firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" constant="66.333333333333314" id="Lhf-h5-ooA"/>
+                            <constraint firstItem="oaO-L1-3eR" firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" constant="60.333333333333343" id="Lhf-h5-ooA"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="oaO-L1-3eR" secondAttribute="trailing" constant="88" id="MW3-M8-JQn"/>
                             <constraint firstItem="AAk-Io-KiF" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="147" id="Nc7-AA-RRt"/>
                             <constraint firstItem="lnL-LR-EGx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oaO-L1-3eR" secondAttribute="trailing" constant="-122" id="PSq-ne-2HX"/>
-                            <constraint firstItem="wVM-rY-lRk" firstAttribute="top" secondItem="lnL-LR-EGx" secondAttribute="bottom" constant="3.3333333333333144" id="RvE-Tg-cMK"/>
+                            <constraint firstItem="wVM-rY-lRk" firstAttribute="top" secondItem="lnL-LR-EGx" secondAttribute="bottom" constant="-0.66666666666668561" id="RvE-Tg-cMK"/>
                             <constraint firstItem="PDb-ci-5A8" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="77" id="W9T-4k-vyV"/>
-                            <constraint firstItem="lnL-LR-EGx" firstAttribute="baseline" secondItem="KQZ-1w-vlD" secondAttribute="baseline" constant="140.99999999999997" id="bVT-M0-kXZ"/>
+                            <constraint firstItem="lnL-LR-EGx" firstAttribute="baseline" secondItem="KQZ-1w-vlD" secondAttribute="baseline" constant="126" id="bVT-M0-kXZ"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KQZ-1w-vlD" secondAttribute="trailing" symbolic="YES" id="bmJ-aL-iap"/>
-                            <constraint firstItem="AAk-Io-KiF" firstAttribute="top" secondItem="wVM-rY-lRk" secondAttribute="bottom" constant="65.333333333333314" id="eQM-53-b94"/>
+                            <constraint firstItem="AAk-Io-KiF" firstAttribute="top" secondItem="wVM-rY-lRk" secondAttribute="bottom" constant="27.333333333333314" id="eQM-53-b94"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="eSl-CB-rXc"/>
                             <constraint firstItem="KQZ-1w-vlD" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="180" id="ebg-gl-wu0"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="oaO-L1-3eR" secondAttribute="bottom" constant="441.66666666666669" id="hmq-S6-Ny2"/>
-                            <constraint firstItem="oaO-L1-3eR" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="144" id="ifM-B4-cmn"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="oaO-L1-3eR" secondAttribute="bottom" constant="390.66666666666669" id="hmq-S6-Ny2"/>
+                            <constraint firstItem="oaO-L1-3eR" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="195" id="ifM-B4-cmn"/>
                             <constraint firstItem="wVM-rY-lRk" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="32" id="kqf-M2-xgM"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="PDb-ci-5A8" secondAttribute="bottom" constant="604" id="nI7-7s-jfk"/>
-                            <constraint firstItem="lnL-LR-EGx" firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" constant="141" id="nVm-cR-CQU"/>
+                            <constraint firstItem="lnL-LR-EGx" firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" constant="126.00000000000003" id="nVm-cR-CQU"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="AAk-Io-KiF" secondAttribute="trailing" constant="148" id="sST-Dy-3sp"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="AAk-Io-KiF" secondAttribute="bottom" constant="231" id="xtv-xH-L0c"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="PDb-ci-5A8" secondAttribute="trailing" constant="13" id="yYv-KE-EAM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="action" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="popupViewButton" destination="PDb-ci-5A8" id="Ibd-7P-bQr"/>
                         <outlet property="priorityField" destination="oaO-L1-3eR" id="wEm-y8-bLL"/>
@@ -154,7 +149,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to &quot;Did you?&quot;, a minimal productivity app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwh-TA-Pe2">
                                         <rect key="frame" x="8" y="8" width="327" height="146"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -206,7 +201,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="AR4-aL-o5l"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -215,13 +210,13 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="26.666666666666657" id="khc-9w-x21"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g61-Jq-RuQ">
-                                                    <rect key="frame" x="234" y="83" width="101" height="19.666666666666671"/>
-                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                                                    <rect key="frame" x="234" y="83" width="101" height="18"/>
+                                                    <fontDescription key="fontDescription" name="CircularStd-Bold" family="Circular Std" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -267,7 +262,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tas-Jf-ATb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1581.5999999999999" y="337.6847290640394"/>
+            <point key="canvasLocation" x="1449" y="338"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Pf2-fJ-ZD9">
@@ -277,8 +272,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMu-dm-4wL">
-                                <rect key="frame" x="166.66666666666666" y="138" width="41.666666666666657" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="updated" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMu-dm-4wL">
+                                <rect key="frame" x="155.66666666666666" y="138" width="63.666666666666657" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -319,11 +314,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--tasks-->
         <scene sceneID="FNY-fA-vkm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OJx-mT-keV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="Ozx-Qc-x6o"/>
+                    <tabBarItem key="tabBarItem" title="tasks" image="list4" id="Ozx-Qc-x6o"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6xX-CO-Oaw">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -336,10 +331,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vB3-tp-OFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="337.6847290640394"/>
+            <point key="canvasLocation" x="750" y="338"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="list4" width="25" height="25"/>
     </resources>
 </document>
