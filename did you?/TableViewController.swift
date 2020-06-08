@@ -142,9 +142,16 @@ extension TableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
-        CoreDataController.shared.removeTask(with: sortedTasks[indexPath.row].task!, priority: sortedTasks[indexPath.row].priority, and: sortedTasks[indexPath.row].date!)
-        sortList()
-        tableView.reloadData()
+        let num = indexPath.section
+        
+        if num == 0 {
+            CoreDataController.shared.removeTask(with: needTasks[indexPath.row].task!, priority: needTasks[indexPath.row].priority, and: needTasks[indexPath.row].date!)
+        } else if num == 1 {
+            CoreDataController.shared.removeTask(with: gotTasks[indexPath.row].task!, priority: gotTasks[indexPath.row].priority, and: gotTasks[indexPath.row].date!)
+        } else if num == 2 {
+            CoreDataController.shared.removeTask(with: wantTasks[indexPath.row].task!, priority: wantTasks[indexPath.row].priority, and: wantTasks[indexPath.row].date!)
+        }
+    
         tableView.reloadData()
     }
 }

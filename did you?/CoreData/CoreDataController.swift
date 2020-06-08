@@ -128,18 +128,55 @@ struct CoreDataController {
     }
     
     func removeTask(with task: String, priority: Int16, and date: Date) {
-        let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "%K == %@ AND %K == %@ AND %K == %@",
-                                             argumentArray: ["task", task,
-                                                             "priority", priority,
-                                                             "date", date])
-        do {
-            guard let task = try viewContext.fetch(fetchRequest).first else { return }
+        
+        if priority == 3 {
+            let fetchRequest: NSFetchRequest<NeedTask> = NeedTask.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "%K == %@ AND %K == %@ AND %K == %@",
+            argumentArray: ["task", task,
+                            "priority", priority,
+                            "date", date])
             
-            viewContext.delete(task)
-            save()
-        } catch let error {
-            print("Unable to delete task with message \(task), priority: \(priority), and date: \(date). Error: \(error)")
+            do {
+                guard let task = try needContext.fetch(fetchRequest).first else { return }
+                
+                needContext.delete(task)
+                save()
+            } catch let error {
+                print("Unable to delete task with message \(task), priority: \(priority), and date: \(date). Error: \(error)")
+            }
+            
+        } else if priority == 2 {
+            let fetchRequest: NSFetchRequest<GotTask> = GotTask.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "%K == %@ AND %K == %@ AND %K == %@",
+            argumentArray: ["task", task,
+                            "priority", priority,
+                            "date", date])
+            
+            do {
+                guard let task = try gotContext.fetch(fetchRequest).first else { return }
+                
+                gotContext.delete(task)
+                save()
+            } catch let error {
+                print("Unable to delete task with message \(task), priority: \(priority), and date: \(date). Error: \(error)")
+            }
+            
+            
+        } else if priority == 1 {
+            let fetchRequest: NSFetchRequest<WantTask> = WantTask.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "%K == %@ AND %K == %@ AND %K == %@",
+            argumentArray: ["task", task,
+                            "priority", priority,
+                            "date", date])
+            
+            do {
+                guard let task = try wantContext.fetch(fetchRequest).first else { return }
+                
+                wantContext.delete(task)
+                save()
+            } catch let error {
+                print("Unable to delete task with message \(task), priority: \(priority), and date: \(date). Error: \(error)")
+            }
         }
     }
     
