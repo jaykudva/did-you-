@@ -5,6 +5,12 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Circular-Black.ttf</string>
+		<string>SFProDisplay-Black.otf</string>
+		<string>SFProDisplay-Bold.ttf</string>
+		<string>SFProDisplay-Medium.otf</string>
+		<string>renner-medium.otf</string>
+		<string>renner-bold.otf</string>
+		<string>renner-black.otf</string>
 		<string>Circular-Bold.ttf</string>
 		<string>Circular-Medium.ttf</string>
 		<string>Poppins-Regular.ttf</string>

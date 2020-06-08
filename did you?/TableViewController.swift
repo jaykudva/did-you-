@@ -15,10 +15,48 @@ class TableViewController: UITableViewController {
         return CoreDataController.shared.tasks
     }
     
+    var needTasks: [NeedTask] {
+        return CoreDataController.shared.needTasks.reversed()
+    }
+    
+    var gotTasks: [GotTask] {
+        return CoreDataController.shared.gotTasks.reversed()
+    }
+    
+    var wantTasks: [WantTask] {
+        return CoreDataController.shared.wantTasks.reversed()
+    }
+    
     // reversed list to have newest tasks at the top
     var oppTasks: [Task] {
         return tasks.reversed()
     }
+    
+    var sortedTasks = [Task]()
+    var namesOfSections = [priorityLevel]()
+    
+    var need = priorityLevel()
+    var got = priorityLevel()
+    var want = priorityLevel()
+    
+    
+    func loadUp() {
+        need.levelNum = 3
+        need.levelString = "need"
+        got.levelNum = 2
+        got.levelString = "got"
+        want.levelNum = 1
+        want.levelString = "want"
+        namesOfSections.append(need)
+        namesOfSections.append(got)
+        namesOfSections.append(want)
+    }
+    
+    func sortList() {
+        sortedTasks = oppTasks.sorted(by: {$0.priority > $1.priority})
+    }
+    
+    
     
     //this is all useless bc .reversed() is a thing
     var tasksButReversed = [Task]()
@@ -31,33 +69,61 @@ class TableViewController: UITableViewController {
         return tasksButReversed
     }
     
+    
+    
     // updated tableview with data on app launch
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
         self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        sortList()
+        loadUp()
     }
     
     // reload data everytime table is brought to foreground
     override func viewDidAppear(_ animated: Bool) {
+        sortList()
         tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return namesOfSections.count
+    }
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return namesOfSections[section].levelString
+    }
+    
+    
 }
 
 // MARK: - UITableViewController
 extension TableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tasks.count
         
+        if section == 0 {
+            return needTasks.count
+        } else if section == 1 {
+            return gotTasks.count
+        }
+        
+        return wantTasks.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell") as! TableViewCell
-        cell.setup(task: oppTasks[indexPath.row])
+        
+        if indexPath.section == 0 {
+            cell.setup(task: needTasks[indexPath.row])
+        } else if indexPath.section == 1 {
+            cell.setup(task: gotTasks[indexPath.row])
+        } else if indexPath.section == 2 {
+            cell.setup(task: wantTasks[indexPath.row])
+        }
         return cell
     }
     
@@ -71,11 +137,14 @@ extension TableViewController {
 }
 
 
+
 extension TableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard editingStyle == .delete else { return }
         
-        CoreDataController.shared.removeTask(with: oppTasks[indexPath.row].task!, priority: oppTasks[indexPath.row].priority, and: oppTasks[indexPath.row].date!)
+        CoreDataController.shared.removeTask(with: sortedTasks[indexPath.row].task!, priority: sortedTasks[indexPath.row].priority, and: sortedTasks[indexPath.row].date!)
+        sortList()
+        tableView.reloadData()
         tableView.reloadData()
     }
 }

@@ -33,6 +33,11 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     // text field to input task
     @IBOutlet weak var taskInput: UITextField!
     
+    
+    public static var hello = 2
+    
+    
+    
 
     // MARK: - UIPickerView Shenanigans
     
@@ -71,6 +76,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         } else {
             priorityField.text = priorities[row]
         }
+//        priorityField.setUnderLine()
         priorityField.resignFirstResponder()
     }
     
@@ -89,6 +95,8 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         // checking if this is initial app launch to show pop-up
         num = defaults.integer(forKey: "popupNoMore")
+        
+//        priorityField.setUnderLine()
         
     }
     
@@ -127,10 +135,13 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 priorityNum = 2
             } else {
                 priorityNum = 1
+                priorityLevel.wantAmt += 1
             }
             
             // store task in memory
             CoreDataController.shared.addTask(with: trimmed, priority: priorityNum, and: Date())
+            
+            print("this was tapped")
             
             // set task input back to empty
             taskInput.text = ""

@@ -23,12 +23,51 @@ struct CoreDataController {
         return container
     }()
     
+    let needPersistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "needModel")
+       
+        container.loadPersistentStores { (description, error) in
+            if let error = error {
+                fatalError("Failed to load the persistent stores from model needModel")
+            }
+        }
+        return container
+    }()
+    
+    let wantPersistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "wantModel")
+       
+        container.loadPersistentStores { (description, error) in
+            if let error = error {
+                fatalError("Failed to load the persistent stores from model wantModel")
+            }
+        }
+        return container
+    }()
+    
+    let gotPersistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "gotModel")
+       
+        container.loadPersistentStores { (description, error) in
+            if let error = error {
+                fatalError("Failed to load the persistent stores from model gotModel")
+            }
+        }
+        return container
+    }()
+    
     private var viewContext: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
     
-    private var entityName: String {
-        return "Task"
+    private var needContext: NSManagedObjectContext {
+        return needPersistentContainer.viewContext
+    }
+    private var gotContext: NSManagedObjectContext {
+        return gotPersistentContainer.viewContext
+    }
+    private var wantContext: NSManagedObjectContext {
+        return wantPersistentContainer.viewContext
     }
     
     var tasks: [Task] {
@@ -40,13 +79,50 @@ struct CoreDataController {
         }
     }
     
+    var needTasks: [NeedTask] {
+        do {
+            return try needContext.fetch(NSFetchRequest<NeedTask>(entityName: "NeedTask"))
+        } catch let error {
+            print("failed to retrieve: \(error)")
+            return []
+        }
+    }
+    var gotTasks: [GotTask] {
+        do {
+            return try gotContext.fetch(NSFetchRequest<GotTask>(entityName: "GotTask"))
+        } catch let error {
+            print("failed to retrieve: \(error)")
+            return []
+        }
+    }
+    var wantTasks: [WantTask] {
+        do {
+            return try wantContext.fetch(NSFetchRequest<WantTask>(entityName: "WantTask"))
+        } catch let error {
+            print("failed to retrieve: \(error)")
+            return []
+        }
+    }
+    
+    
     func addTask(with msg: String, priority: Int16, and date: Date) {
-        let task = NSEntityDescription.insertNewObject(forEntityName: "Task", into: viewContext) as? Task
         
-        
-        task?.setValue(msg, forKey: "task")
-        task?.setValue(priority, forKey: "priority")
-        task?.setValue(date, forKey: "date")
+        if priority == 3 {
+            let specificTask = NSEntityDescription.insertNewObject(forEntityName: "NeedTask", into: needContext) as? NeedTask
+            specificTask?.setValue(msg, forKey: "task")
+            specificTask?.setValue(priority, forKey: "priority")
+            specificTask?.setValue(date, forKey: "date")
+        } else if priority == 2 {
+            let specificTask = NSEntityDescription.insertNewObject(forEntityName: "GotTask", into: gotContext) as? GotTask
+            specificTask?.setValue(msg, forKey: "task")
+            specificTask?.setValue(priority, forKey: "priority")
+            specificTask?.setValue(date, forKey: "date")
+        } else if priority == 1 {
+            let specificTask = NSEntityDescription.insertNewObject(forEntityName: "WantTask", into: wantContext) as? WantTask
+            specificTask?.setValue(msg, forKey: "task")
+            specificTask?.setValue(priority, forKey: "priority")
+            specificTask?.setValue(date, forKey: "date")
+        }
         
         save()
     }
@@ -70,6 +146,9 @@ struct CoreDataController {
     private func save() {
         do {
             try viewContext.save()
+            try needContext.save()
+            try gotContext.save()
+            try wantContext.save()
         } catch let error{
             print("Unable to save. Error: \(error)")
         }

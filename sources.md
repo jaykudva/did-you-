@@ -17,10 +17,15 @@
 * [Changing the font](https://stackoverflow.com/questions/27455345/uipickerview-wont-allow-changing-font-name-and-size-via-delegates-attributedt)
 
 ## UITableView
-*[Removing lines in the tableview](https://stackoverflow.com/questions/40332305/remove-uitableview-separator-line)
+* [Removing lines in the tableview](https://stackoverflow.com/questions/40332305/remove-uitableview-separator-line)
 
 ## Colors
 * [Table view cell background](https://www.2020colours.com/0a1016)
 
 ## General markdown help
 * [GitHub Guide](https://guides.github.com/features/mastering-markdown/)
+
+## Fonts
+* [Renner (this was used)](https://freebies.fluxes.com/renner-free-typeface/)
+* [SF Pro](https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts)
+* [Finding alternatives to paid fonts](https://elementthree.com/blog/free-font-alternatives-to-designer-favorites/)

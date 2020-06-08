@@ -43,7 +43,51 @@ class TableViewCell: UITableViewCell {
            }
         priorityView.text = "Priority: \(priorityMsg)"
         taskSub.text = task.date?.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
+    }
+    func setup(task: NeedTask) {
+        let priorityLvl = task.priority
+        var priorityMsg = ""
+        taskMain.text = task.task
         
+        if priorityLvl == 3 {
+               priorityMsg = "Need"
+           } else if priorityLvl == 2 {
+               priorityMsg = "Gotta"
+           } else {
+               priorityMsg = "Want"
+           }
+        priorityView.text = "Priority: \(priorityMsg)"
+        taskSub.text = task.date?.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
+    }
+    func setup(task: WantTask) {
+        let priorityLvl = task.priority
+        var priorityMsg = ""
+        taskMain.text = task.task
+        
+        if priorityLvl == 3 {
+               priorityMsg = "Need"
+           } else if priorityLvl == 2 {
+               priorityMsg = "Gotta"
+           } else {
+               priorityMsg = "Want"
+           }
+        priorityView.text = "Priority: \(priorityMsg)"
+        taskSub.text = task.date?.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
+    }
+    func setup(task: GotTask) {
+        let priorityLvl = task.priority
+        var priorityMsg = ""
+        taskMain.text = task.task
+        
+        if priorityLvl == 3 {
+               priorityMsg = "Need"
+           } else if priorityLvl == 2 {
+               priorityMsg = "Gotta"
+           } else {
+               priorityMsg = "Want"
+           }
+        priorityView.text = "Priority: \(priorityMsg)"
+        taskSub.text = task.date?.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
     }
 
 }
