@@ -94,8 +94,18 @@ class TableViewController: UITableViewController {
         return namesOfSections.count
     }
 
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return namesOfSections[section].levelString
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return namesOfSections[section].levelString
+//    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! headerCell
+        cell.setup(array: namesOfSections, section: section)
+        return cell.contentView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 49
     }
     
     

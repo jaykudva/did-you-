@@ -7,17 +7,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Circular-Medium.ttf">
-            <string>CircularStd-Medium</string>
-        </array>
         <array key="SFProDisplay-Bold.ttf">
             <string>SFProDisplay-Bold</string>
         </array>
-        <array key="SFProDisplay-Medium.otf">
-            <string>SFProDisplay-Medium</string>
-        </array>
         <array key="renner-bold.otf">
             <string>Renner-it-Bold</string>
+        </array>
+        <array key="renner-medium.otf">
+            <string>Renner-it-Medium</string>
         </array>
     </customFonts>
     <scenes>
@@ -34,12 +31,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="Lei-Pu-aVh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CircularStd-Medium" family="Circular Std" pointSize="8"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="8"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAk-Io-KiF">
                                 <rect key="frame" x="147" y="468" width="80" height="30"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="17"/>
                                 <state key="normal" title="add task">
                                     <color key="titleColor" red="0.42340537909999998" green="0.69866496320000004" blue="0.81938737630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -55,7 +52,7 @@
                                     <constraint firstAttribute="height" constant="68.666666666666657" id="Bsf-f2-HmI"/>
                                 </constraints>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="48"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDb-ci-5A8">
@@ -73,14 +70,14 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" text="I" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
                                 <rect key="frame" x="180" y="178" width="16" height="68.666666666666686"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="Renner-it-Medium" family="Renner*" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="to" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="lnL-LR-EGx">
-                                <rect key="frame" x="169.66666666666666" y="304" width="41.333333333333343" height="68.666666666666686"/>
+                                <rect key="frame" x="171.33333333333334" y="304" width="39.666666666666657" height="68.666666666666686"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="Renner-it-Medium" family="Renner*" pointSize="48"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -93,8 +90,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67.329999999999998" id="Uh6-nT-dhZ"/>
                                 </constraints>
-                                <color key="textColor" red="0.55203783510000004" green="0.63658833500000001" blue="0.56573128699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="48"/>
+                                <color key="textColor" red="0.46752082885195861" green="0.66773914421310276" blue="0.77988182106598991" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="48"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -148,13 +145,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubR-wi-YlV">
-                                <rect key="frame" x="16" y="616" width="343" height="162"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubR-wi-YlV">
+                                <rect key="frame" x="16" y="576" width="343" height="202"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to &quot;Did you?&quot;, a minimal productivity app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwh-TA-Pe2">
-                                        <rect key="frame" x="8" y="8" width="327" height="146"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to &quot;Did you?&quot;, a minimal productivity app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwh-TA-Pe2">
+                                        <rect key="frame" x="8" y="8" width="327" height="186"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="186" id="CWK-AQ-NC1"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -162,12 +160,23 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.044407673180000003" green="0.065395928919999999" blue="0.088475205000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="fwh-TA-Pe2" firstAttribute="leading" secondItem="ubR-wi-YlV" secondAttribute="leadingMargin" id="ZtV-aY-i7l"/>
+                                    <constraint firstItem="fwh-TA-Pe2" firstAttribute="bottom" secondItem="ubR-wi-YlV" secondAttribute="bottomMargin" id="dZB-6j-gMa"/>
+                                    <constraint firstItem="fwh-TA-Pe2" firstAttribute="top" secondItem="ubR-wi-YlV" secondAttribute="topMargin" id="ftU-cm-Lhe"/>
+                                    <constraint firstItem="fwh-TA-Pe2" firstAttribute="trailing" secondItem="ubR-wi-YlV" secondAttribute="trailingMargin" id="irA-zC-5W6"/>
+                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="MSb-pM-SNE" appends="YES" id="erC-Za-OlQ"/>
                                 </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ubR-wi-YlV" firstAttribute="leading" secondItem="pXA-zf-mIs" secondAttribute="leadingMargin" id="PPZ-xp-EnC"/>
+                            <constraint firstItem="ubR-wi-YlV" firstAttribute="trailing" secondItem="pXA-zf-mIs" secondAttribute="trailingMargin" id="mX9-r5-ZiU"/>
+                            <constraint firstItem="ubR-wi-YlV" firstAttribute="bottom" secondItem="hNn-A2-nU1" secondAttribute="bottom" id="rAV-mf-npZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hNn-A2-nU1"/>
                     </view>
                     <connections>
@@ -183,7 +192,7 @@
             </objects>
             <point key="canvasLocation" x="1448.8" y="-320.68965517241378"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Tasks-->
         <scene sceneID="wW1-4R-kax">
             <objects>
                 <tableViewController id="T6Q-hr-g9M" customClass="TableViewController" customModule="did_you_" customModuleProvider="target" sceneMemberID="viewController">
@@ -192,35 +201,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="140" id="iPr-8F-yJj" customClass="TableViewCell" customModule="did_you_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="140"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" rowHeight="49" id="iPr-8F-yJj" customClass="headerCell" customModule="did_you_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="49"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iPr-8F-yJj" id="cdl-jX-ODY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-Qy-HKp">
+                                            <rect key="frame" x="16" y="7" width="72" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="LLB-cI-Hvh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="29"/>
+                                            <color key="textColor" red="0.55203783510000004" green="0.63658833500000001" blue="0.56573128699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cl2-Qy-HKp" firstAttribute="leading" secondItem="cdl-jX-ODY" secondAttribute="leadingMargin" id="47t-4Q-96x"/>
+                                        <constraint firstItem="cl2-Qy-HKp" firstAttribute="centerY" secondItem="cdl-jX-ODY" secondAttribute="centerY" id="xTd-eM-iCb"/>
+                                        <constraint firstItem="cl2-Qy-HKp" firstAttribute="top" secondItem="cdl-jX-ODY" secondAttribute="topMargin" constant="-4" id="zsw-mH-yEA"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="headerLabel" destination="cl2-Qy-HKp" id="NFl-Lm-d84"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="140" id="upb-wd-AFQ" customClass="TableViewCell" customModule="did_you_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="77" width="375" height="140"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="upb-wd-AFQ" id="IzJ-BO-KYi">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vBh-RG-HtQ">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3L-GF-RkD">
                                             <rect key="frame" x="16" y="11" width="343" height="118"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMI-lk-LQ6">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OP3-2z-G2R">
                                                     <rect key="frame" x="8" y="16" width="327" height="35"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="AR4-aL-o5l"/>
+                                                        <constraint firstAttribute="height" constant="35" id="XBR-J1-Jdc"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIa-1F-kKr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xB-do-rAi">
                                                     <rect key="frame" x="8" y="83" width="169" height="26.666666666666671"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="26.666666666666657" id="khc-9w-x21"/>
+                                                        <constraint firstAttribute="height" constant="26.666666666666657" id="liK-P4-mQW"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="14"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g61-Jq-RuQ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wna-7h-fd6">
                                                     <rect key="frame" x="234" y="83" width="101" height="15.666666666666671"/>
                                                     <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -229,30 +267,30 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.044407673180000003" green="0.065395928919999999" blue="0.088475205000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="RIa-1F-kKr" firstAttribute="leading" secondItem="vBh-RG-HtQ" secondAttribute="leading" constant="8" id="6D8-jz-YOZ"/>
-                                                <constraint firstItem="g61-Jq-RuQ" firstAttribute="firstBaseline" secondItem="RIa-1F-kKr" secondAttribute="firstBaseline" id="FBC-ZO-fRW"/>
-                                                <constraint firstAttribute="trailing" secondItem="nMI-lk-LQ6" secondAttribute="trailing" constant="8" id="HvC-2g-fzh"/>
-                                                <constraint firstItem="nMI-lk-LQ6" firstAttribute="leading" secondItem="vBh-RG-HtQ" secondAttribute="leading" constant="8" id="I65-mc-bRj"/>
-                                                <constraint firstItem="RIa-1F-kKr" firstAttribute="top" secondItem="nMI-lk-LQ6" secondAttribute="bottom" constant="32" id="VMi-ti-jTr"/>
-                                                <constraint firstItem="g61-Jq-RuQ" firstAttribute="leading" secondItem="RIa-1F-kKr" secondAttribute="trailing" constant="57" id="mA2-7x-S2v"/>
-                                                <constraint firstAttribute="trailing" secondItem="RIa-1F-kKr" secondAttribute="trailing" constant="166" id="obs-gr-4Xu"/>
-                                                <constraint firstItem="nMI-lk-LQ6" firstAttribute="top" secondItem="vBh-RG-HtQ" secondAttribute="top" constant="16" id="tOe-pP-cxC"/>
-                                                <constraint firstItem="g61-Jq-RuQ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nMI-lk-LQ6" secondAttribute="trailing" id="zZh-Qr-7ct"/>
+                                                <constraint firstItem="wna-7h-fd6" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OP3-2z-G2R" secondAttribute="trailing" id="5d1-Ar-lQM"/>
+                                                <constraint firstItem="wna-7h-fd6" firstAttribute="leading" secondItem="7xB-do-rAi" secondAttribute="trailing" constant="57" id="IOm-j3-MAy"/>
+                                                <constraint firstItem="7xB-do-rAi" firstAttribute="top" secondItem="OP3-2z-G2R" secondAttribute="bottom" constant="32" id="PGM-4l-6kL"/>
+                                                <constraint firstItem="wna-7h-fd6" firstAttribute="firstBaseline" secondItem="7xB-do-rAi" secondAttribute="firstBaseline" id="WGn-3U-X3p"/>
+                                                <constraint firstItem="OP3-2z-G2R" firstAttribute="top" secondItem="C3L-GF-RkD" secondAttribute="top" constant="16" id="XIu-lq-QyO"/>
+                                                <constraint firstAttribute="trailing" secondItem="OP3-2z-G2R" secondAttribute="trailing" constant="8" id="fQT-iZ-VuB"/>
+                                                <constraint firstItem="OP3-2z-G2R" firstAttribute="leading" secondItem="C3L-GF-RkD" secondAttribute="leading" constant="8" id="hoB-d1-dWi"/>
+                                                <constraint firstItem="7xB-do-rAi" firstAttribute="leading" secondItem="C3L-GF-RkD" secondAttribute="leading" constant="8" id="uMp-3X-jIu"/>
+                                                <constraint firstAttribute="trailing" secondItem="7xB-do-rAi" secondAttribute="trailing" constant="166" id="wpp-fK-Ezb"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="vBh-RG-HtQ" firstAttribute="bottom" secondItem="cdl-jX-ODY" secondAttribute="bottomMargin" id="AiY-N4-UJo"/>
-                                        <constraint firstItem="vBh-RG-HtQ" firstAttribute="top" secondItem="cdl-jX-ODY" secondAttribute="topMargin" id="khn-O2-gJ9"/>
-                                        <constraint firstItem="vBh-RG-HtQ" firstAttribute="leading" secondItem="cdl-jX-ODY" secondAttribute="leadingMargin" id="nEU-HB-a85"/>
-                                        <constraint firstItem="vBh-RG-HtQ" firstAttribute="trailing" secondItem="cdl-jX-ODY" secondAttribute="trailingMargin" id="vN3-55-DKI"/>
+                                        <constraint firstItem="C3L-GF-RkD" firstAttribute="top" secondItem="IzJ-BO-KYi" secondAttribute="topMargin" id="CXs-9F-JMS"/>
+                                        <constraint firstItem="C3L-GF-RkD" firstAttribute="leading" secondItem="IzJ-BO-KYi" secondAttribute="leadingMargin" id="uXk-4D-TNS"/>
+                                        <constraint firstItem="C3L-GF-RkD" firstAttribute="bottom" secondItem="IzJ-BO-KYi" secondAttribute="bottomMargin" id="ujb-08-7fR"/>
+                                        <constraint firstItem="C3L-GF-RkD" firstAttribute="trailing" secondItem="IzJ-BO-KYi" secondAttribute="trailingMargin" id="vPz-Gw-ulb"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="cardView" destination="vBh-RG-HtQ" id="acX-TL-LT6"/>
-                                    <outlet property="priorityView" destination="g61-Jq-RuQ" id="aQi-sQ-KOk"/>
-                                    <outlet property="taskMain" destination="nMI-lk-LQ6" id="KHy-L1-7T5"/>
-                                    <outlet property="taskSub" destination="RIa-1F-kKr" id="gjT-uo-jAR"/>
+                                    <outlet property="cardView" destination="C3L-GF-RkD" id="Ruy-XD-ub3"/>
+                                    <outlet property="priorityView" destination="wna-7h-fd6" id="uta-xd-N0M"/>
+                                    <outlet property="taskMain" destination="OP3-2z-G2R" id="6xo-pJ-KSG"/>
+                                    <outlet property="taskSub" destination="7xB-do-rAi" id="EyE-D4-vMd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -261,14 +299,14 @@
                             <outlet property="delegate" destination="T6Q-hr-g9M" id="UQX-9F-fTg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="5Rd-Qy-W0f"/>
+                    <navigationItem key="navigationItem" title="Tasks" id="5Rd-Qy-W0f"/>
                     <connections>
                         <segue destination="xyG-jF-bdd" kind="show" identifier="showDetail" id="dvR-G2-4Zp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tas-Jf-ATb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1449" y="338"/>
+            <point key="canvasLocation" x="1448.8" y="337.6847290640394"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Pf2-fJ-ZD9">

@@ -21,6 +21,7 @@
 		69191A75248DC483002A340B /* needModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69191A73248DC483002A340B /* needModel.xcdatamodeld */; };
 		69191A78248DCAA5002A340B /* gotModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69191A76248DCAA5002A340B /* gotModel.xcdatamodeld */; };
 		69191A7B248DCAEE002A340B /* wantModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 69191A79248DCAEE002A340B /* wantModel.xcdatamodeld */; };
+		692E9834248E2BE90052992B /* headerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692E9833248E2BE90052992B /* headerCell.swift */; };
 		693C1449248774DC0044B37C /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C1448248774DC0044B37C /* CoreDataController.swift */; };
 		693C144C248775F90044B37C /* didModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 693C144A248775F90044B37C /* didModel.xcdatamodeld */; };
 		693C144E248794790044B37C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C144D248794790044B37C /* TableViewController.swift */; };
@@ -52,6 +53,7 @@
 		69191A74248DC483002A340B /* needModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = needModel.xcdatamodel; sourceTree = "<group>"; };
 		69191A77248DCAA5002A340B /* gotModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = gotModel.xcdatamodel; sourceTree = "<group>"; };
 		69191A7A248DCAEE002A340B /* wantModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wantModel.xcdatamodel; sourceTree = "<group>"; };
+		692E9833248E2BE90052992B /* headerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = headerCell.swift; sourceTree = "<group>"; };
 		693C1448248774DC0044B37C /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		693C144B248775F90044B37C /* didModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = didModel.xcdatamodel; sourceTree = "<group>"; };
 		693C144D248794790044B37C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */,
 				69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */,
 				69191A71248DB41E002A340B /* priorityLevel.swift */,
+				692E9833248E2BE90052992B /* headerCell.swift */,
 			);
 			name = objects;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				69191A75248DC483002A340B /* needModel.xcdatamodeld in Sources */,
 				69E663E22479E63300D352D8 /* AppDelegate.swift in Sources */,
 				69B1F869248AD7E900D6EDE7 /* CustomTextField.swift in Sources */,
+				692E9834248E2BE90052992B /* headerCell.swift in Sources */,
 				69B1F8652488C22400D6EDE7 /* DetailViewController.swift in Sources */,
 				69191A78248DCAA5002A340B /* gotModel.xcdatamodeld in Sources */,
 				69E663E42479E63300D352D8 /* SceneDelegate.swift in Sources */,

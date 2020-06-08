@@ -54,7 +54,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         if pickerLabel.text == "select" {
             pickerLabel.textColor = UIColor.darkGray
         }
-        pickerLabel.font = UIFont(name: "Poppins-SemiBold", size: 25) // In this use your custom font
+        pickerLabel.font = UIFont(name: "SFProDisplay-Bold", size: 25) // In this use your custom font
         pickerLabel.textAlignment = NSTextAlignment.center
         return pickerLabel
     }
