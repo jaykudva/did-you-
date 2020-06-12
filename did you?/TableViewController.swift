@@ -86,9 +86,6 @@ class TableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return namesOfSections.count
@@ -137,6 +134,31 @@ extension TableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("section is: \(indexPath.section)")
+//        print("row is: \(indexPath.row) ")
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
+        if indexPath.section == 0 {
+            vc?.textInput = needTasks[indexPath.row].task!
+            vc?.dateInput = needTasks[indexPath.row].date!.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
+            vc?.priorityInput = "Need"
+        } else if indexPath.section == 1 {
+            vc?.textInput = gotTasks[indexPath.row].task!
+            vc?.dateInput = gotTasks[indexPath.row].date!.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
+            vc?.priorityInput = "Got"
+        } else if indexPath.section == 2 {
+            vc?.textInput = wantTasks[indexPath.row].task!
+            vc?.dateInput = wantTasks[indexPath.row].date!.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
+            vc?.priorityInput = "Want"
+        }
+        self.navigationController?.pushViewController(vc!, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
+    
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
@@ -161,7 +183,6 @@ extension TableViewController {
         } else if num == 2 {
             CoreDataController.shared.removeTask(with: wantTasks[indexPath.row].task!, priority: wantTasks[indexPath.row].priority, and: wantTasks[indexPath.row].date!)
         }
-    
         tableView.reloadData()
     }
 }

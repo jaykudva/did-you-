@@ -12,20 +12,19 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        taskHere.text = textInput
+        priorityHere.text = priorityInput
+        dateHere.text = dateInput
 
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var label: UILabel!
+    public var textInput = String()
+    public var priorityInput = String()
+    public var dateInput = String()
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    @IBOutlet weak var taskHere: UILabel!
+    @IBOutlet weak var priorityHere: UILabel!
+    @IBOutlet weak var dateHere: UILabel!
+    
 }
