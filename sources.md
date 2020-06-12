@@ -19,6 +19,9 @@
 ## UITableView
 * [Removing lines in the tableview](https://stackoverflow.com/questions/40332305/remove-uitableview-separator-line)
 
+## Detail View Controller
+* [Passing data from cell to controller](https://www.youtube.com/watch?v=hGV9pfssmXA)
+
 ## Colors
 * [Table view cell background](https://www.2020colours.com/0a1016)
 * [Preview dark theme look in Xcode](https://www.appcoda.com/dark-mode-preview/)
