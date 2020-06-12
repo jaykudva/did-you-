@@ -29,6 +29,12 @@
 		69B1F8672488CE0A00D6EDE7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */; };
 		69B1F869248AD7E900D6EDE7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */; };
 		69B1F86B248B05F700D6EDE7 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */; };
+		69E4946B249345F6006C52D2 /* Muli-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69E49468249345F6006C52D2 /* Muli-Black.ttf */; };
+		69E4946C249345F6006C52D2 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69E49469249345F6006C52D2 /* Muli-Bold.ttf */; };
+		69E4946D249345F6006C52D2 /* Muli-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69E4946A249345F6006C52D2 /* Muli-Medium.ttf */; };
+		69E494722493467C006C52D2 /* Inter-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69E4946F2493467C006C52D2 /* Inter-Black.otf */; };
+		69E494732493467C006C52D2 /* Inter-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69E494702493467C006C52D2 /* Inter-Medium.otf */; };
+		69E494742493467C006C52D2 /* Inter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69E494712493467C006C52D2 /* Inter-Bold.otf */; };
 		69E663E22479E63300D352D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E663E12479E63300D352D8 /* AppDelegate.swift */; };
 		69E663E42479E63300D352D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E663E32479E63300D352D8 /* SceneDelegate.swift */; };
 		69E663E62479E63300D352D8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E663E52479E63300D352D8 /* FirstViewController.swift */; };
@@ -61,6 +67,12 @@
 		69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		69E49468249345F6006C52D2 /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Black.ttf"; sourceTree = "<group>"; };
+		69E49469249345F6006C52D2 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
+		69E4946A249345F6006C52D2 /* Muli-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Medium.ttf"; sourceTree = "<group>"; };
+		69E4946F2493467C006C52D2 /* Inter-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.otf"; sourceTree = "<group>"; };
+		69E494702493467C006C52D2 /* Inter-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.otf"; sourceTree = "<group>"; };
+		69E494712493467C006C52D2 /* Inter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.otf"; sourceTree = "<group>"; };
 		69E663DE2479E63300D352D8 /* did you?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "did you?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69E663E12479E63300D352D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69E663E32479E63300D352D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +138,65 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		69E4946324934582006C52D2 /* circular */ = {
+			isa = PBXGroup;
+			children = (
+				69026759248CA327006AB80D /* Circular-Black.ttf */,
+				6902675C248CA393006AB80D /* Circular-Medium.ttf */,
+				69026758248CA327006AB80D /* Circular-Bold.ttf */,
+			);
+			path = circular;
+			sourceTree = "<group>";
+		};
+		69E494642493459A006C52D2 /* sf pro */ = {
+			isa = PBXGroup;
+			children = (
+				69191A6D248D8075002A340B /* SFProDisplay-Black.otf */,
+				69191A6E248D8075002A340B /* SFProDisplay-Medium.otf */,
+				69191A6B248D7F49002A340B /* SFProDisplay-Bold.ttf */,
+			);
+			path = "sf pro";
+			sourceTree = "<group>";
+		};
+		69E49465249345AD006C52D2 /* renner */ = {
+			isa = PBXGroup;
+			children = (
+				69191A66248CD85F002A340B /* renner-black.otf */,
+				69191A65248CD85F002A340B /* renner-bold.otf */,
+				69191A67248CD85F002A340B /* renner-medium.otf */,
+			);
+			path = renner;
+			sourceTree = "<group>";
+		};
+		69E49466249345B5006C52D2 /* poppins */ = {
+			isa = PBXGroup;
+			children = (
+				69026C62247B330C006C7A16 /* Poppins-Regular.ttf */,
+				69E663F92479F54600D352D8 /* Poppins-SemiBold.ttf */,
+			);
+			path = poppins;
+			sourceTree = "<group>";
+		};
+		69E49467249345C0006C52D2 /* muli */ = {
+			isa = PBXGroup;
+			children = (
+				69E49468249345F6006C52D2 /* Muli-Black.ttf */,
+				69E49469249345F6006C52D2 /* Muli-Bold.ttf */,
+				69E4946A249345F6006C52D2 /* Muli-Medium.ttf */,
+			);
+			path = muli;
+			sourceTree = "<group>";
+		};
+		69E4946E24934666006C52D2 /* Inter */ = {
+			isa = PBXGroup;
+			children = (
+				69E4946F2493467C006C52D2 /* Inter-Black.otf */,
+				69E494712493467C006C52D2 /* Inter-Bold.otf */,
+				69E494702493467C006C52D2 /* Inter-Medium.otf */,
+			);
+			path = Inter;
+			sourceTree = "<group>";
+		};
 		69E663D52479E63300D352D8 = {
 			isa = PBXGroup;
 			children = (
@@ -161,17 +232,12 @@
 		69E663F82479F42400D352D8 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				69191A66248CD85F002A340B /* renner-black.otf */,
-				69191A6D248D8075002A340B /* SFProDisplay-Black.otf */,
-				69191A6E248D8075002A340B /* SFProDisplay-Medium.otf */,
-				69191A6B248D7F49002A340B /* SFProDisplay-Bold.ttf */,
-				69191A65248CD85F002A340B /* renner-bold.otf */,
-				69191A67248CD85F002A340B /* renner-medium.otf */,
-				69026759248CA327006AB80D /* Circular-Black.ttf */,
-				6902675C248CA393006AB80D /* Circular-Medium.ttf */,
-				69026758248CA327006AB80D /* Circular-Bold.ttf */,
-				69026C62247B330C006C7A16 /* Poppins-Regular.ttf */,
-				69E663F92479F54600D352D8 /* Poppins-SemiBold.ttf */,
+				69E4946E24934666006C52D2 /* Inter */,
+				69E49467249345C0006C52D2 /* muli */,
+				69E49466249345B5006C52D2 /* poppins */,
+				69E49465249345AD006C52D2 /* renner */,
+				69E494642493459A006C52D2 /* sf pro */,
+				69E4946324934582006C52D2 /* circular */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -234,6 +300,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69E4946D249345F6006C52D2 /* Muli-Medium.ttf in Resources */,
+				69E494742493467C006C52D2 /* Inter-Bold.otf in Resources */,
 				69191A6F248D8075002A340B /* SFProDisplay-Black.otf in Resources */,
 				69E663F02479E63500D352D8 /* LaunchScreen.storyboard in Resources */,
 				69191A68248CD85F002A340B /* renner-bold.otf in Resources */,
@@ -243,11 +311,15 @@
 				69191A6A248CD85F002A340B /* renner-medium.otf in Resources */,
 				6902675D248CA394006AB80D /* Circular-Medium.ttf in Resources */,
 				6902675A248CA327006AB80D /* Circular-Bold.ttf in Resources */,
+				69E494722493467C006C52D2 /* Inter-Black.otf in Resources */,
 				69E663ED2479E63500D352D8 /* Assets.xcassets in Resources */,
+				69E494732493467C006C52D2 /* Inter-Medium.otf in Resources */,
 				69E663EB2479E63300D352D8 /* Main.storyboard in Resources */,
 				69026C63247B330C006C7A16 /* Poppins-Regular.ttf in Resources */,
 				69191A70248D8075002A340B /* SFProDisplay-Medium.otf in Resources */,
 				6902675B248CA327006AB80D /* Circular-Black.ttf in Resources */,
+				69E4946C249345F6006C52D2 /* Muli-Bold.ttf in Resources */,
+				69E4946B249345F6006C52D2 /* Muli-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

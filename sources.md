@@ -21,6 +21,8 @@
 
 ## Colors
 * [Table view cell background](https://www.2020colours.com/0a1016)
+* [Preview dark theme look in Xcode](https://www.appcoda.com/dark-mode-preview/)
+* [Creating theme dependent color profile](https://www.youtube.com/watch?v=j7z2bsOsqYw)
 
 ## UserDefaults
 * [Implementation](https://www.youtube.com/watch?v=sUhq1vIrRbo)
@@ -29,6 +31,6 @@
 * [GitHub Guide](https://guides.github.com/features/mastering-markdown/)
 
 ## Fonts
-* [Renner (this was used)](https://freebies.fluxes.com/renner-free-typeface/)
-* [SF Pro](https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts)
+* [Renner](https://freebies.fluxes.com/renner-free-typeface/)
+* [SF Pro (this was used)](https://github.com/sahibjotsaggu/San-Francisco-Pro-Fonts)
 * [Finding alternatives to paid fonts](https://elementthree.com/blog/free-font-alternatives-to-designer-favorites/)

@@ -3,6 +3,7 @@
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -95,7 +96,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="popup view"/>
                         <constraints>
                             <constraint firstItem="oaO-L1-3eR" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="90" id="7wO-DC-yJG"/>
                             <constraint firstItem="wVM-rY-lRk" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="AO7-st-QyA"/>
@@ -153,12 +154,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="186" id="CWK-AQ-NC1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.044407673180000003" green="0.065395928919999999" blue="0.088475205000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="popup view"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="fwh-TA-Pe2" firstAttribute="leading" secondItem="ubR-wi-YlV" secondAttribute="leadingMargin" id="ZtV-aY-i7l"/>
@@ -200,6 +201,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" name="popup view"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" rowHeight="49" id="iPr-8F-yJj" customClass="headerCell" customModule="did_you_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="49"/>
@@ -209,11 +211,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-Qy-HKp">
-                                            <rect key="frame" x="16" y="7" width="72" height="35"/>
+                                            <rect key="frame" x="16" y="7" width="73.333333333333329" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="LLB-cI-Hvh"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="29"/>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="29"/>
                                             <color key="textColor" red="0.55203783510000004" green="0.63658833500000001" blue="0.56573128699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -245,7 +247,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="XBR-J1-Jdc"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="25"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="25"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -254,13 +256,13 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="26.666666666666657" id="liK-P4-mQW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wna-7h-fd6">
-                                                    <rect key="frame" x="234" y="83" width="101" height="15.666666666666671"/>
-                                                    <fontDescription key="fontDescription" name="Renner-it-Bold" family="Renner*" pointSize="14"/>
+                                                    <rect key="frame" x="234" y="83" width="101" height="17"/>
+                                                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -381,5 +383,8 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="list4" width="25" height="25"/>
+        <namedColor name="popup view">
+            <color red="0.95606201889999998" green="0.95580726859999998" blue="0.96285718679999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

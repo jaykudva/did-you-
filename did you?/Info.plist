@@ -4,6 +4,12 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Inter-Medium.otf</string>
+		<string>Inter-Bold.otf</string>
+		<string>Inter-Black.otf</string>
+		<string>Muli-Black.ttf</string>
+		<string>Muli-Bold.ttf</string>
+		<string>Muli-Medium.ttf</string>
 		<string>Circular-Black.ttf</string>
 		<string>SFProDisplay-Black.otf</string>
 		<string>SFProDisplay-Bold.ttf</string>
