@@ -101,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */,
-				69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */,
 				69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */,
 				69191A71248DB41E002A340B /* priorityLevel.swift */,
 				692E9833248E2BE90052992B /* headerCell.swift */,
@@ -112,6 +111,7 @@
 		69026766248CBE9A006AB80D /* views */ = {
 			isa = PBXGroup;
 			children = (
+				69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */,
 				69E663E52479E63300D352D8 /* FirstViewController.swift */,
 				693C144D248794790044B37C /* TableViewController.swift */,
 				69B1F8642488C22400D6EDE7 /* DetailViewController.swift */,
