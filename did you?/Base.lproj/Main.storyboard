@@ -403,7 +403,7 @@
                                                             <state key="normal" title="add"/>
                                                             <connections>
                                                                 <action selector="enterAdd:" destination="QKJ-ov-Gaw" eventType="touchUpInside" id="PUb-Fq-TRl"/>
-                                                                <segue destination="lGb-cM-GmJ" kind="presentation" modalPresentationStyle="overCurrentContext" id="Qpg-qI-Bic"/>
+                                                                <segue destination="lGb-cM-GmJ" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="Qpg-qI-Bic"/>
                                                             </connections>
                                                         </button>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="epi-xr-sWa">

@@ -15,6 +15,10 @@ class AddedViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { timer in
+            self.dismiss(animated: true)
+        }
+    }
 
 }
