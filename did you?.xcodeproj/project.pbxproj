@@ -130,10 +130,10 @@
 			isa = PBXGroup;
 			children = (
 				693C1448248774DC0044B37C /* CoreDataController.swift */,
+				69191A79248DCAEE002A340B /* wantModel.xcdatamodeld */,
 				693C144A248775F90044B37C /* didModel.xcdatamodeld */,
 				69191A76248DCAA5002A340B /* gotModel.xcdatamodeld */,
 				69191A73248DC483002A340B /* needModel.xcdatamodeld */,
-				69191A79248DCAEE002A340B /* wantModel.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";

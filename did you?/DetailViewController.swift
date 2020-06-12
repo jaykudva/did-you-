@@ -19,6 +19,13 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    func setup(theTask: WantTask) {
+        textInput = theTask.task!
+        dateInput = theTask.date!.toString(dateFormat: "MMMM d, h:mm a")
+        priorityInput = "Want"
+    }
+    
     public var textInput = String()
     public var priorityInput = String()
     public var dateInput = String()

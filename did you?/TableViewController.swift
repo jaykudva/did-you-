@@ -147,9 +147,7 @@ extension TableViewController {
             vc?.dateInput = gotTasks[indexPath.row].date!.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
             vc?.priorityInput = "Got"
         } else if indexPath.section == 2 {
-            vc?.textInput = wantTasks[indexPath.row].task!
-            vc?.dateInput = wantTasks[indexPath.row].date!.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
-            vc?.priorityInput = "Want"
+            vc?.setup(theTask: wantTasks[indexPath.row])
         }
         self.navigationController?.pushViewController(vc!, animated: true)
         

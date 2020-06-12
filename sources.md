@@ -21,6 +21,7 @@
 
 ## Detail View Controller
 * [Passing data from cell to controller](https://www.youtube.com/watch?v=hGV9pfssmXA)
+* [Date formatting](https://nsdateformatter.com)
 
 ## Colors
 * [Table view cell background](https://www.2020colours.com/0a1016)
