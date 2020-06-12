@@ -11,6 +11,7 @@
 		6902675B248CA327006AB80D /* Circular-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69026759248CA327006AB80D /* Circular-Black.ttf */; };
 		6902675D248CA394006AB80D /* Circular-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6902675C248CA393006AB80D /* Circular-Medium.ttf */; };
 		69026C63247B330C006C7A16 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69026C62247B330C006C7A16 /* Poppins-Regular.ttf */; };
+		690D572F2494319F00169838 /* AddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690D572E2494319F00169838 /* AddedViewController.swift */; };
 		69191A68248CD85F002A340B /* renner-bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69191A65248CD85F002A340B /* renner-bold.otf */; };
 		69191A69248CD85F002A340B /* renner-black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69191A66248CD85F002A340B /* renner-black.otf */; };
 		69191A6A248CD85F002A340B /* renner-medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 69191A67248CD85F002A340B /* renner-medium.otf */; };
@@ -49,6 +50,7 @@
 		69026759248CA327006AB80D /* Circular-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circular-Black.ttf"; sourceTree = "<group>"; };
 		6902675C248CA393006AB80D /* Circular-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Circular-Medium.ttf"; sourceTree = "<group>"; };
 		69026C62247B330C006C7A16 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		690D572E2494319F00169838 /* AddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddedViewController.swift; sourceTree = "<group>"; };
 		69191A65248CD85F002A340B /* renner-bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "renner-bold.otf"; sourceTree = "<group>"; };
 		69191A66248CD85F002A340B /* renner-black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "renner-black.otf"; sourceTree = "<group>"; };
 		69191A67248CD85F002A340B /* renner-medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "renner-medium.otf"; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				69E663E52479E63300D352D8 /* FirstViewController.swift */,
 				693C144D248794790044B37C /* TableViewController.swift */,
 				69B1F8642488C22400D6EDE7 /* DetailViewController.swift */,
+				690D572E2494319F00169838 /* AddedViewController.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				69E663E62479E63300D352D8 /* FirstViewController.swift in Sources */,
 				69191A72248DB41E002A340B /* priorityLevel.swift in Sources */,
 				693C144E248794790044B37C /* TableViewController.swift in Sources */,
+				690D572F2494319F00169838 /* AddedViewController.swift in Sources */,
 				693C1449248774DC0044B37C /* CoreDataController.swift in Sources */,
 				69B1F8672488CE0A00D6EDE7 /* TableViewCell.swift in Sources */,
 				69B1F86B248B05F700D6EDE7 /* PopupViewController.swift in Sources */,
