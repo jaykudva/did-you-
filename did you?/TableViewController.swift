@@ -139,13 +139,9 @@ extension TableViewController {
 //        print("row is: \(indexPath.row) ")
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController
         if indexPath.section == 0 {
-            vc?.textInput = needTasks[indexPath.row].task!
-            vc?.dateInput = needTasks[indexPath.row].date!.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
-            vc?.priorityInput = "Need"
+            vc?.setup(theTask: needTasks[indexPath.row])
         } else if indexPath.section == 1 {
-            vc?.textInput = gotTasks[indexPath.row].task!
-            vc?.dateInput = gotTasks[indexPath.row].date!.toString(dateFormat: "MMM dd, yyyy HH:mm:ss").uppercased()
-            vc?.priorityInput = "Got"
+            vc?.setup(theTask: gotTasks[indexPath.row])
         } else if indexPath.section == 2 {
             vc?.setup(theTask: wantTasks[indexPath.row])
         }
@@ -154,8 +150,6 @@ extension TableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
-    
-    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140

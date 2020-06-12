@@ -127,6 +127,11 @@ struct CoreDataController {
         save()
     }
     
+    func addNotes(with want: WantTask, and notes: String) {
+        want.notes = notes
+        save()
+    }
+    
     func removeTask(with task: String, priority: Int16, and date: Date) {
         
         if priority == 3 {
@@ -179,6 +184,7 @@ struct CoreDataController {
             }
         }
     }
+    
     
     private func save() {
         do {
