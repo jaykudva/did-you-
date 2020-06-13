@@ -14,14 +14,14 @@ class AddedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    override func viewDidAppear(_ animated: Bool) {
         popup.layer.shadowOpacity = 1
         popup.layer.shadowOffset = CGSize.zero
         popup.layer.shadowColor = UIColor.darkGray.cgColor
         popup.layer.cornerRadius = 8
+
+        // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
         _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { timer in
             self.dismiss(animated: true)
         }
