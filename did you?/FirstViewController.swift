@@ -80,8 +80,23 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         priorityField.resignFirstResponder()
     }
     
+    @IBOutlet weak var settingsIcon: UIButton!
+    
     
     // MARK: - General App Load
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        settingsIcon.isHidden = false
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+        settingsIcon.isHidden = true
+    }
+    
     // assigning delegates and sources on initial app launch
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		69B1F8672488CE0A00D6EDE7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */; };
 		69B1F869248AD7E900D6EDE7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */; };
 		69B1F86B248B05F700D6EDE7 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */; };
+		69BF39D02497517E00DB171F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BF39CF2497517E00DB171F /* SettingsViewController.swift */; };
 		69E4946B249345F6006C52D2 /* Muli-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69E49468249345F6006C52D2 /* Muli-Black.ttf */; };
 		69E4946C249345F6006C52D2 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69E49469249345F6006C52D2 /* Muli-Bold.ttf */; };
 		69E4946D249345F6006C52D2 /* Muli-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69E4946A249345F6006C52D2 /* Muli-Medium.ttf */; };
@@ -70,6 +71,7 @@
 		69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		69B1F86A248B05F700D6EDE7 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		69BF39CF2497517E00DB171F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		69E49468249345F6006C52D2 /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Black.ttf"; sourceTree = "<group>"; };
 		69E49469249345F6006C52D2 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
 		69E4946A249345F6006C52D2 /* Muli-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Medium.ttf"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				693C144D248794790044B37C /* TableViewController.swift */,
 				69B1F8642488C22400D6EDE7 /* DetailViewController.swift */,
 				690D572E2494319F00169838 /* AddedViewController.swift */,
+				69BF39CF2497517E00DB171F /* SettingsViewController.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -266,7 +269,6 @@
 				F8F1A2CE76C25EB5DE37B1D1 /* Pods-did you?.debug.xcconfig */,
 				AEBDA99ED19E4FD4B30CB36A /* Pods-did you?.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -414,6 +416,7 @@
 				69191A75248DC483002A340B /* needModel.xcdatamodeld in Sources */,
 				69E663E22479E63300D352D8 /* AppDelegate.swift in Sources */,
 				69B1F869248AD7E900D6EDE7 /* CustomTextField.swift in Sources */,
+				69BF39D02497517E00DB171F /* SettingsViewController.swift in Sources */,
 				692E9834248E2BE90052992B /* headerCell.swift in Sources */,
 				69B1F8652488C22400D6EDE7 /* DetailViewController.swift in Sources */,
 				69191A78248DCAA5002A340B /* gotModel.xcdatamodeld in Sources */,
