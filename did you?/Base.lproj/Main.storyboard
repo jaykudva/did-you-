@@ -345,7 +345,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl2-Qy-HKp">
-                                            <rect key="frame" x="16" y="7" width="72" height="35"/>
+                                            <rect key="frame" x="16" y="7" width="73.333333333333329" height="35"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="71" id="LLB-cI-Hvh"/>
                                             </constraints>

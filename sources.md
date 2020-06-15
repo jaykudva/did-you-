@@ -20,6 +20,9 @@
 ## UITableView
 * [Removing lines in the tableview](https://stackoverflow.com/questions/40332305/remove-uitableview-separator-line)
 
+## Navigation Controller
+* [how to hide nav bar on certain views](https://stackoverflow.com/questions/29209453/how-to-hide-a-navigation-bar-from-first-viewcontroller-in-swift/39679506)
+
 ## Detail View Controller
 * [Passing data from cell to controller](https://www.youtube.com/watch?v=hGV9pfssmXA)
 * [Date formatting](https://nsdateformatter.com)
