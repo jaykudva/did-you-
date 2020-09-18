@@ -99,9 +99,6 @@
                                 </constraints>
                                 <color key="tintColor" name="text color"/>
                                 <state key="normal" image="gear icon"/>
-                                <connections>
-                                    <segue destination="Nfq-ud-6vU" kind="show" id="sWH-Ue-HY0"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="popup view"/>
@@ -139,7 +136,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="iyx-ZV-YdR"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="first" id="iyx-ZV-YdR"/>
                     <navigationItem key="navigationItem" id="WOm-Dz-ZCR"/>
                     <connections>
                         <outlet property="popupViewButton" destination="PDb-ci-5A8" id="Ibd-7P-bQr"/>
@@ -152,28 +149,43 @@
             </objects>
             <point key="canvasLocation" x="935" y="-321"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--View Controller-->
+        <scene sceneID="f2Q-Xz-J7P">
+            <objects>
+                <viewController id="cme-eV-ucQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lxX-0X-eHk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ye7-Nx-uk7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bEe-ur-WgH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="-321"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="dla-sV-O34">
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nfq-ud-6vU" customClass="SettingsViewController" customModule="did_you_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ljL-Ep-JKc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="peek a boo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6O-t1-cJe">
-                                <rect key="frame" x="145.33333333333334" y="369" width="84.666666666666657" height="20.333333333333314"/>
+                                <rect key="frame" x="145.33333333333334" y="396" width="84.666666666666657" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="System color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehJ-q3-vtv">
-                                <rect key="frame" x="32" y="54.666666666666664" width="311" height="20.333333333333336"/>
+                                <rect key="frame" x="32" y="81.666666666666671" width="311" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ec6-Nn-c2O">
-                                <rect key="frame" x="60" y="93" width="255" height="30"/>
+                                <rect key="frame" x="60" y="120" width="255" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fW-Rc-Bm1">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -188,6 +200,9 @@
                                         <state key="normal">
                                             <color key="titleColor" red="0.55203783510000004" green="0.63658833500000001" blue="0.56573128699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clickLightGreen:" destination="Nfq-ud-6vU" eventType="touchUpInside" id="GeT-WJ-5QW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYP-Ym-9CB">
                                         <rect key="frame" x="90" y="0.0" width="30" height="30"/>
@@ -195,6 +210,9 @@
                                         <state key="normal">
                                             <color key="titleColor" red="0.55203783510000004" green="0.63658833500000001" blue="0.56573128699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clickLightGray:" destination="Nfq-ud-6vU" eventType="touchUpInside" id="vxd-cp-eB8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqu-vs-pBR">
                                         <rect key="frame" x="135" y="0.0" width="30" height="30"/>
@@ -202,20 +220,29 @@
                                         <state key="normal">
                                             <color key="titleColor" red="0.55203783510000004" green="0.63658833500000001" blue="0.56573128699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clickDarkGray:" destination="Nfq-ud-6vU" eventType="touchUpInside" id="bgo-Yf-6P8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JU5-RY-jow">
                                         <rect key="frame" x="180" y="0.0" width="30" height="30"/>
-                                        <color key="backgroundColor" red="0.46752082890000002" green="0.66773914420000002" blue="0.77988182110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" name="lightBlue"/>
                                         <state key="normal">
                                             <color key="titleColor" red="0.55203783510000004" green="0.63658833500000001" blue="0.56573128699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clickLightBlue:" destination="Nfq-ud-6vU" eventType="touchUpInside" id="181-lu-cM4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5t-n2-hKT">
                                         <rect key="frame" x="225" y="0.0" width="30" height="30"/>
-                                        <color key="backgroundColor" red="0.36231301599999999" green="0.51747551830000005" blue="0.60438234459999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" name="darkTeal"/>
                                         <state key="normal">
                                             <color key="titleColor" red="0.55203783510000004" green="0.63658833500000001" blue="0.56573128699999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clickDarkTeal:" destination="Nfq-ud-6vU" eventType="touchUpInside" id="H9g-PF-WWf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -233,11 +260,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ktR-nN-kq0"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="gear" catalog="system" id="IeO-he-uvm"/>
                     <navigationItem key="navigationItem" id="uN7-hU-TY2"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bgbg" destination="ljL-Ep-JKc" id="7TG-Ul-b1r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dyi-pL-Sl7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="-321"/>
+            <point key="canvasLocation" x="-1" y="694"/>
         </scene>
         <!--Popup View Controller-->
         <scene sceneID="Fwt-tm-3DX">
@@ -525,7 +557,7 @@
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RQi-lK-G75">
                                                         <rect key="frame" x="0.0" y="24.333333333333314" width="240" height="241"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                        <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -594,6 +626,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="jiP-UX-xo3"/>
                         <segue destination="OJx-mT-keV" kind="relationship" relationship="viewControllers" id="paw-GF-dqO"/>
+                        <segue destination="Nfq-ud-6vU" kind="relationship" relationship="viewControllers" id="HtK-Tx-AiC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -621,8 +654,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="gear icon" width="512" height="512"/>
         <image name="list4" width="25" height="25"/>
+        <namedColor name="darkTeal">
+            <color red="0.39800000190734863" green="0.55900001525878906" blue="0.65100002288818359" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="lightBlue">
+            <color red="0.50499999523162842" green="0.70399999618530273" blue="0.81199997663497925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="popup view">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

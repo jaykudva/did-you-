@@ -26,5 +26,20 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBOutlet var bgbg: UIView!
+    
+    @IBAction func clickDarkTeal(_ sender: Any) {
+        Theme.hello = "darkTeal"
+        Theme.newColor(name:"darkTeal")
+        bgbg.backgroundColor = Theme.theColor
+        print(Theme.hello)
+        
+    }
+    @IBAction func clickLightGreen(_ sender: Any) {
+        Theme.hello = "lightGreen"
+        Theme.newColor(name:"lightGreen")
+        bgbg.backgroundColor = Theme.theColor
+        print(Theme.hello)
+    }
+    
 }

@@ -27,6 +27,8 @@
 		693C1449248774DC0044B37C /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C1448248774DC0044B37C /* CoreDataController.swift */; };
 		693C144C248775F90044B37C /* didModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 693C144A248775F90044B37C /* didModel.xcdatamodeld */; };
 		693C144E248794790044B37C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C144D248794790044B37C /* TableViewController.swift */; };
+		698EC89E251548BC0063DE43 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698EC89D251548BC0063DE43 /* Theme.swift */; };
+		698EC8A0251549AE0063DE43 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698EC89F251549AE0063DE43 /* Colors.xcassets */; };
 		69B1F8652488C22400D6EDE7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F8642488C22400D6EDE7 /* DetailViewController.swift */; };
 		69B1F8672488CE0A00D6EDE7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */; };
 		69B1F869248AD7E900D6EDE7 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */; };
@@ -67,6 +69,8 @@
 		693C1448248774DC0044B37C /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		693C144B248775F90044B37C /* didModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = didModel.xcdatamodel; sourceTree = "<group>"; };
 		693C144D248794790044B37C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		698EC89D251548BC0063DE43 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		698EC89F251549AE0063DE43 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		69B1F8642488C22400D6EDE7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		69B1F8662488CE0A00D6EDE7 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		69B1F868248AD7E900D6EDE7 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -157,6 +161,16 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		698EC89C251548AA0063DE43 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				69E663F82479F42400D352D8 /* Fonts */,
+				698EC89D251548BC0063DE43 /* Theme.swift */,
+				698EC89F251549AE0063DE43 /* Colors.xcassets */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
 		69E4946324934582006C52D2 /* circular */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,7 +255,7 @@
 				69026765248CBE7B006AB80D /* objects */,
 				69026766248CBE9A006AB80D /* views */,
 				693C1447248774CC0044B37C /* CoreData */,
-				69E663F82479F42400D352D8 /* Fonts */,
+				698EC89C251548AA0063DE43 /* resources */,
 				69E663E92479E63300D352D8 /* Main.storyboard */,
 				69E663EC2479E63500D352D8 /* Assets.xcassets */,
 				69E663EE2479E63500D352D8 /* LaunchScreen.storyboard */,
@@ -338,6 +352,7 @@
 				69E663F02479E63500D352D8 /* LaunchScreen.storyboard in Resources */,
 				69191A68248CD85F002A340B /* renner-bold.otf in Resources */,
 				69E663FA2479F54600D352D8 /* Poppins-SemiBold.ttf in Resources */,
+				698EC8A0251549AE0063DE43 /* Colors.xcassets in Resources */,
 				69191A6C248D7F49002A340B /* SFProDisplay-Bold.ttf in Resources */,
 				69191A69248CD85F002A340B /* renner-black.otf in Resources */,
 				69191A6A248CD85F002A340B /* renner-medium.otf in Resources */,
@@ -413,6 +428,7 @@
 				693C1449248774DC0044B37C /* CoreDataController.swift in Sources */,
 				69B1F8672488CE0A00D6EDE7 /* TableViewCell.swift in Sources */,
 				69B1F86B248B05F700D6EDE7 /* PopupViewController.swift in Sources */,
+				698EC89E251548BC0063DE43 /* Theme.swift in Sources */,
 				69191A75248DC483002A340B /* needModel.xcdatamodeld in Sources */,
 				69E663E22479E63300D352D8 /* AppDelegate.swift in Sources */,
 				69B1F869248AD7E900D6EDE7 /* CustomTextField.swift in Sources */,

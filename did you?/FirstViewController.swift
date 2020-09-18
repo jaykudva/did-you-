@@ -86,6 +86,7 @@ class FirstViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     // MARK: - General App Load
     
     override func viewWillAppear(_ animated: Bool) {
+        priorityField.textColor = Theme.theColor
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
         settingsIcon.isHidden = false
